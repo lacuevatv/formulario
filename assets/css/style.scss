@@ -36,16 +36,14 @@ html, body {
     font-family: $fuente-principal;
     color: $color-blanco;
     background-color: $color-negro;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 500;
     overflow-x: hidden;
-    @media (min-width: $lg) {
-        font-size: 16px;
-        line-height: 24px;
-    }
 }
 
 .main-wrapper {
+    padding: 18px 15px;
     height: 100vh;
     position: relative;
     z-index: 1;
@@ -61,6 +59,7 @@ html, body {
     }
 
     @media (min-width: $md) {
+        padding: 0;
         background-image: url(../images/fondo-pc.png);
         background-size: cover;
     }
@@ -72,8 +71,8 @@ html, body {
 }
 
 .inner-wrapper {
+    height: 100%;
     position: relative;
-    margin: 18px 15px;
     border: 1px solid black;
     padding: $paddingLeftRight;
 
@@ -83,6 +82,23 @@ html, body {
         padding: $paddingLeftRightLG;
     }
 
+}
+
+.brand-name {
+    img {
+        width: 30%;
+        max-width: 260px;
+        height: auto;
+        @media (min-width: $md) {
+            width: 121px;
+        }
+    }
+}
+
+.main {
+    @media (min-width: $md) {
+        height: 90%;
+    }
 }
 
 /*--------------------------------------------------------------

@@ -35,7 +35,8 @@ $(document).ready(function(){
 2.0 FUNCIONES
 --------------------------------------------------------------*/
 function initFormularios(){
-
+    var indexactual = 0;
+    setIndex(indexactual);
     var specialcharacters = '@#$^&%*()+=[]\'\"\/{}|:;¡!¿?<>,.';
     var numeros = '0123456789';
     var letras = 'abcdefghijklmnñopqrstuvwxyz';
@@ -116,4 +117,23 @@ function initFormularios(){
         return cadena;
     }
 
+}
+
+//carga o modifica el indice de acuerdo al index actual
+function setIndex(indexactual) {
+    var indiceTotal = 3;
+    var contenedor = $('.index-wrapper');
+    var html = '<ul class="dots">';
+    for (var i = 0; i < indiceTotal; i++) {
+        
+        html += '<li';
+        if ( i == 0 ) {
+            html += ' class="active active-1"';
+        }
+        html += '><span class="number-index">'+(i+1)+'</span></li>';
+        
+    }//for
+    
+    html += '</ul>';
+    contenedor.append( $(html) );
 }

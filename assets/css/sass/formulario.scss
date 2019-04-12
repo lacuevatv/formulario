@@ -1,3 +1,194 @@
 /*
  * FORMULARIO
 */
+.form-wrapper {
+    border: solid 1px red;
+    width: 100%;
+    padding: 50px;
+    @media (min-width: $md) {
+        height: 100%;
+        padding: 70px 122px 0;
+    }
+    
+
+    .index-wrapper {
+        position: absolute;
+        right: 4px;
+        top: 15px;
+        @media (min-width: $xs) {
+            right: $paddingLeftRight;
+            top: 35px;
+        }
+        @media (min-width: $md) {
+            right: $paddingLeftRightLG;
+            top: 55px;
+        }
+    
+        .dots {
+            position: relative;
+            width: 120px;
+            font-size: 70%;
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -o-align-items: center;
+            align-items: center;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            -o-justify-content: space-between;
+            justify-content: space-between;
+            @include transition(all $transitionSpeed);
+            
+            @media (min-width: $xs) {
+                width: 269px;
+                font-size: 100%;
+            }
+            @media (min-width: $sm) {
+                width: 266px;
+            }
+            @media (min-width: $md) {
+                width: 174px;
+                font-size: 80%;
+            }
+
+            li {
+                @include transition(all $transitionSpeed);
+                position: relative;
+                padding-right: 20px;
+                @media (min-width: $xs) {
+                    padding-right: 50px;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                    &:before {
+                        content: none;
+                    }
+                    &:after {
+                        content: none;
+                    }
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    left: 25%;
+                    z-index: 1;
+                    height: 5px;
+                    width: 100%;
+                    background-color: #145596;
+                    @include transition(all $transitionSpeed);
+                    @media (min-width: $xs) {
+                        height: 8px;
+                    }
+                    @media (min-width: $sm) {
+                        height: 10px;
+                    }
+                    @media (min-width: $xs) {
+                        height: 5px;
+                    }
+                }
+                
+                .number-index {
+                    background-color: #145596;
+                    padding: 3px 10px;
+                    position: relative;
+                    z-index: 111;
+                    @include border-radius(50%);
+                    @media (min-width: $xs) {
+                        padding: 7px 15px;
+                    }
+                    @media (min-width: $md) {
+                        padding: 3px 9px;
+                    }
+                }//number-index
+
+            }//li
+
+            li.active {
+                &:after {
+                    content: '';
+                    @include transition(all $transitionSpeed);
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    left: 25%;
+                    z-index: 11;
+                    height: 5px;
+                    width: 25%;
+                    background-color: #6ec4e8;
+                    @media (min-width: $xs) {
+                        height: 8px;
+                    }
+                    @media (min-width: $sm) {
+                        height: 10px;
+                    }
+                    @media (min-width: $xs) {
+                        height: 5px;
+                    }
+                }
+
+                .number-index {
+                    @include transition(all $transitionSpeed);
+                    background-color: #6ec4e8;
+                }
+            }
+
+            li.active-1 {
+                &:after {
+                    width: 45%;
+                    @media (min-width: $sm) {
+                        width: 35%;
+                    }
+                    @media (min-width: $md) {
+                        width: 25%;
+                    }
+                }
+            }
+            li.active-2 {
+                &:after {
+                    width: 55%;
+                    @media (min-width: $sm) {
+                        width: 60%;
+                    }
+                    @media (min-width: $md) {
+                        width: 45%;
+                    }
+                }
+            }
+            li.active-3 {
+                &:after {
+                    width: 65%;
+                    @media (min-width: $sm) {
+                        width: 75%;
+                    }
+                    @media (min-width: $md) {
+                        width: 60%;
+                    }
+                }
+            }
+            li.active-full {
+                &:after {
+                    width: 100%;
+                }
+            }
+
+        }//.dotsz
+    }//.index-wrapper
+
+}//.form-wrapper
+
+.formulario {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}//.formulario

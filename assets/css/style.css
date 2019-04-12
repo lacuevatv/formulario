@@ -1,0 +1,557 @@
+@charset "UTF-8";
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Fuentes
+3.0 VARIABLES
+4.0 GENERAL
+5.0 ANIMACIONES
+6.0 FORMULARIO
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+  clear: both;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*para ocultar texto y que lo lean los lectores de no videntes*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*para eliminar los float*/
+header, section, footer, aside {
+  clear: both;
+}
+
+/*imagen al 100% de ancho responsive*/
+.image-responsive {
+  width: 100%;
+  height: auto;
+}
+
+/*input al 100%*/
+input, select {
+  display: block;
+  width: 100%;
+}
+
+/*elimina el diseño por defecto en el iphone*/
+input[type=submit] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+/*--------------------------------------------------------------
+2.0 Fuentes
+--------------------------------------------------------------*/
+/*GOTHAM*/
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("../fonts/gotham/gothamhtf-black.eot");
+  src: url("../fonts/gotham/gothamhtf-black.woff") format("woff"), url("../fonts/gotham/gothamhtf-black.svg") format("svg"), url("../fonts/gotham/gothamhtf-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("../fonts/gotham/gothamhtf-bold.eot");
+  src: url("../fonts/gotham/gothamhtf-bold.woff") format("woff"), url("../fonts/gotham/gothamhtf-bold.svg") format("svg"), url("../fonts/gotham/gothamhtf-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+/*@font-face {
+    font-family: 'Gotham HTF';
+    src: url('../fonts/gotham/gothamhtf-book.eot');
+    src: url('../fonts/gotham/gothamhtf-book.woff') format('woff'),
+        url('../fonts/gotham/gothamhtf-book.svg') format('svg'),
+        url('../fonts/gotham/gothamhtf-book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham HTF';
+    src: url('../fonts/gotham/gothamhtf-bookcondensed.eot');
+    src: url('../fonts/gotham/gothamhtf-bookcondensed.woff') format('woff'),
+        url('../fonts/gotham/gothamhtf-bookcondensed.svg') format('svg'),
+        url('../fonts/gotham/gothamhtf-bookcondensed.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}*/
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("../fonts/gotham/gothamhtf-medium.eot");
+  src: url("../fonts/gotham/gothamhtf-medium.woff") format("woff"), url("../fonts/gotham/gothamhtf-medium.svg") format("svg"), url("../fonts/gotham/gothamhtf-medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("../fonts/gotham/gothamhtf-mediumcondensed.eot");
+  src: url("../fonts/gotham/gothamhtf-mediumcondensed.woff") format("woff"), url("../fonts/gotham/gothamhtf-mediumcondensed.svg") format("svg"), url("../fonts/gotham/gothamhtf-mediumcondensed.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("../fonts/gotham/gothamhtf-light.eot");
+  src: url("../fonts/gotham/gothamhtf-light.woff") format("woff"), url("../fonts/gotham/gothamhtf-light.svg") format("svg"), url("../fonts/gotham/gothamhtf-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("../fonts/gotham/gothamhtf-lightcondensed.eot");
+  src: url("../fonts/gotham/gothamhtf-lightcondensed.woff") format("woff"), url("../fonts/gotham/gothamhtf-lightcondensed.svg") format("svg"), url("../fonts/gotham/gothamhtf-lightcondensed.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("../fonts/gotham/gothamhtf-xlight.eot");
+  src: url("../fonts/gotham/gothamhtf-xlight.woff") format("woff"), url("../fonts/gotham/gothamhtf-xlight.svg") format("svg"), url("../fonts/gotham/gothamhtf-xlight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("../fonts/gotham/gothamhtf-thin.eot");
+  src: url("../fonts/gotham/gothamhtf-thin.woff") format("woff"), url("../fonts/gotham/gothamhtf-thin.svg") format("svg"), url("../fonts/gotham/gothamhtf-thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+/*OPEN SANS*/
+/*--------------------------------------------------------------
+3.0 variables
+--------------------------------------------------------------*/
+/*FUENTES*/
+/*COLORES*/
+/*GRID OPTIONS*/
+/*--------------------------------------------------------------
+4.0 General
+--------------------------------------------------------------*/
+html, body {
+  font-family: "Gotham HTF", "Open Sans", sans-serif;
+  color: #fff;
+  background-color: #7a7a7a;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+.main-wrapper {
+  padding: 18px 15px;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background-color: #007bc3;
+  background-repeat: no-repeat;
+  background-image: url(../images/fondo-mobil.png);
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .main-wrapper {
+    background-image: url(../images/fondo-mobil@2x.png);
+    background-size: cover;
+  }
+}
+@media (min-width: 992px) {
+  .main-wrapper {
+    padding: 0;
+    background-image: url(../images/fondo-pc.png);
+    background-size: cover;
+  }
+}
+@media (min-width: 992px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 992px) and (min--moz-device-pixel-ratio: 1.5), (min-width: 992px) and (min-resolution: 240dpi) {
+  .main-wrapper {
+    background-image: url(../images/fondo-pc@2x.png);
+    background-size: cover;
+  }
+}
+
+.inner-wrapper {
+  height: 100%;
+  position: relative;
+  border: 1px solid black;
+  padding: 15px;
+}
+@media (min-width: 992px) {
+  .inner-wrapper {
+    border: none;
+    margin: 0;
+    padding: 50px;
+  }
+}
+
+.brand-name img {
+  width: 30%;
+  max-width: 260px;
+  height: auto;
+}
+@media (min-width: 992px) {
+  .brand-name img {
+    width: 121px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main {
+    height: 90%;
+  }
+}
+
+/*--------------------------------------------------------------
+4.0 animaciones
+--------------------------------------------------------------*/
+.animate-slide-up {
+  opacity: 0;
+  animation-name: slide-up;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.animate-slide-left {
+  opacity: 0;
+  animation-name: slide-left;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+/*--------------------------------------------------------------
+4.0 formulario
+--------------------------------------------------------------*/
+/*
+ * FORMULARIO
+*/
+.form-wrapper {
+  border: solid 1px red;
+  width: 100%;
+  padding: 50px;
+}
+@media (min-width: 992px) {
+  .form-wrapper {
+    height: 100%;
+    padding: 70px 122px 0;
+  }
+}
+.form-wrapper .index-wrapper {
+  position: absolute;
+  right: 4px;
+  top: 15px;
+}
+@media (min-width: 576px) {
+  .form-wrapper .index-wrapper {
+    right: 15px;
+    top: 35px;
+  }
+}
+@media (min-width: 992px) {
+  .form-wrapper .index-wrapper {
+    right: 50px;
+    top: 55px;
+  }
+}
+.form-wrapper .index-wrapper .dots {
+  position: relative;
+  width: 120px;
+  font-size: 70%;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+@media (min-width: 576px) {
+  .form-wrapper .index-wrapper .dots {
+    width: 269px;
+    font-size: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .form-wrapper .index-wrapper .dots {
+    width: 266px;
+  }
+}
+@media (min-width: 992px) {
+  .form-wrapper .index-wrapper .dots {
+    width: 174px;
+    font-size: 80%;
+  }
+}
+.form-wrapper .index-wrapper .dots li {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+  position: relative;
+  padding-right: 20px;
+}
+@media (min-width: 576px) {
+  .form-wrapper .index-wrapper .dots li {
+    padding-right: 50px;
+  }
+}
+.form-wrapper .index-wrapper .dots li:last-child {
+  padding-right: 0;
+}
+.form-wrapper .index-wrapper .dots li:last-child:before {
+  content: none;
+}
+.form-wrapper .index-wrapper .dots li:last-child:after {
+  content: none;
+}
+.form-wrapper .index-wrapper .dots li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 25%;
+  z-index: 1;
+  height: 5px;
+  width: 100%;
+  background-color: #145596;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+@media (min-width: 576px) {
+  .form-wrapper .index-wrapper .dots li:before {
+    height: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .form-wrapper .index-wrapper .dots li:before {
+    height: 10px;
+  }
+}
+@media (min-width: 576px) {
+  .form-wrapper .index-wrapper .dots li:before {
+    height: 5px;
+  }
+}
+.form-wrapper .index-wrapper .dots li .number-index {
+  background-color: #145596;
+  padding: 3px 10px;
+  position: relative;
+  z-index: 111;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+@media (min-width: 576px) {
+  .form-wrapper .index-wrapper .dots li .number-index {
+    padding: 7px 15px;
+  }
+}
+@media (min-width: 992px) {
+  .form-wrapper .index-wrapper .dots li .number-index {
+    padding: 3px 9px;
+  }
+}
+.form-wrapper .index-wrapper .dots li.active:after {
+  content: "";
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 25%;
+  z-index: 11;
+  height: 5px;
+  width: 25%;
+  background-color: #6ec4e8;
+}
+@media (min-width: 576px) {
+  .form-wrapper .index-wrapper .dots li.active:after {
+    height: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .form-wrapper .index-wrapper .dots li.active:after {
+    height: 10px;
+  }
+}
+@media (min-width: 576px) {
+  .form-wrapper .index-wrapper .dots li.active:after {
+    height: 5px;
+  }
+}
+.form-wrapper .index-wrapper .dots li.active .number-index {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+  background-color: #6ec4e8;
+}
+.form-wrapper .index-wrapper .dots li.active-1:after {
+  width: 45%;
+}
+@media (min-width: 768px) {
+  .form-wrapper .index-wrapper .dots li.active-1:after {
+    width: 35%;
+  }
+}
+@media (min-width: 992px) {
+  .form-wrapper .index-wrapper .dots li.active-1:after {
+    width: 25%;
+  }
+}
+.form-wrapper .index-wrapper .dots li.active-2:after {
+  width: 55%;
+}
+@media (min-width: 768px) {
+  .form-wrapper .index-wrapper .dots li.active-2:after {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .form-wrapper .index-wrapper .dots li.active-2:after {
+    width: 45%;
+  }
+}
+.form-wrapper .index-wrapper .dots li.active-3:after {
+  width: 65%;
+}
+@media (min-width: 768px) {
+  .form-wrapper .index-wrapper .dots li.active-3:after {
+    width: 75%;
+  }
+}
+@media (min-width: 992px) {
+  .form-wrapper .index-wrapper .dots li.active-3:after {
+    width: 60%;
+  }
+}
+.form-wrapper .index-wrapper .dots li.active-full:after {
+  width: 100%;
+}
+
+.formulario {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
