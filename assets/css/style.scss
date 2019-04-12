@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Fuentes
+3.0 VARIABLES
+4.0 GENERAL
+5.0 ANIMACIONES
+6.0 FORMULARIO
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+
+@import 'sass/reset';
+
+/*--------------------------------------------------------------
+2.0 Fuentes
+--------------------------------------------------------------*/
+
+@import 'sass/fonts';
+
+/*--------------------------------------------------------------
+3.0 variables
+--------------------------------------------------------------*/
+
+@import 'sass/variables';
+
+/*--------------------------------------------------------------
+4.0 General
+--------------------------------------------------------------*/
+
+html, body {
+    font-family: $fuente-principal;
+    color: $color-blanco;
+    background-color: $color-negro;
+    font-size: 16px;
+    line-height: 20px;
+    overflow-x: hidden;
+    @media (min-width: $lg) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.main-wrapper {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    background-color: $color-azul;
+    background-repeat: no-repeat;
+    background-image: url(../images/fondo-mobil.png);
+    background-size: cover;
+    background-position: center;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background-image: url(../images/fondo-mobil@2x.png);
+        background-size: cover;
+    }
+
+    @media (min-width: $md) {
+        background-image: url(../images/fondo-pc.png);
+        background-size: cover;
+    }
+
+    @media (min-width: $md) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: $md) and (min--moz-device-pixel-ratio: 1.5), (min-width: $md) and (min-resolution: 240dpi) {
+        background-image: url(../images/fondo-pc@2x.png);
+        background-size: cover;
+    }
+}
+
+.inner-wrapper {
+    position: relative;
+    margin: 18px 15px;
+    border: 1px solid black;
+    padding: $paddingLeftRight;
+
+    @media (min-width: $md) {
+        border: none;
+        margin: 0;
+        padding: $paddingLeftRightLG;
+    }
+
+}
+
+/*--------------------------------------------------------------
+4.0 animaciones
+--------------------------------------------------------------*/
+
+@import 'sass/animaciones';
+
+/*--------------------------------------------------------------
+4.0 formulario
+--------------------------------------------------------------*/
+
+@import 'sass/formulario';
