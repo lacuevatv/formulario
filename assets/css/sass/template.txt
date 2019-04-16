@@ -1,3 +1,5 @@
+16pt = 22px
+
 @media (min-width: $md) {}
 -webkit-
 -moz-
@@ -44,3 +46,13 @@ justify-content: center;
   background-size: cover;
   background-position: right center;
 }
+
+
+
+<div class="form-group">
+    <input type="text" name="charge">
+    <label for="charge">Sos Alumno</label>
+    <span class="msj-error-input">
+        Este campo nos ayuda a comunicarnos
+    </span>
+</div>

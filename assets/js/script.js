@@ -15,7 +15,7 @@
 var baseUrl = 'http://' + window.location.host;
 //var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 var indexactual = 1;
-
+var totalPantallas = 9;
 
 /*--------------------------------------------------------------
 1.0 BASE 
@@ -125,12 +125,62 @@ function initFormularios(){
     //coloca la primer pantalla para empezar
     setScreenFormulario(indexactual);
 
+    //clic en label, focus en input
+    $(document).on('click', 'label', function(){
+        focusInput( this );
+    });
+
+    //on focus, etiqueta se achica
+    $(document).on('focus', 'input', function(){
+        zoomOutLabel( this );
+        $(this).addClass('input-on');
+    });
+
+    //botones pantalla, para adelante y para atras:
+    $(document).on('click', '.btn-pantallas', function(e){
+        var pantallaActual = $(this).attr('data-pantalla');
+        var direccion = $(this).attr('data-direction');
+        var nuevaPantalla;
+
+        
+
+        //chequea direccion para asignar la pantalla a activar
+        if (direccion == 'next') {
+
+            //si es la ultima pantalla hay que enviar formulario
+            if ( parseInt(pantallaActual) == totalPantallas ) {
+                console.log('estamos en la ultima pantalla, enviar formulario');
+                return true;
+            }
+
+            nuevaPantalla = parseInt(pantallaActual)+1;
+
+            if ( indexactual >= 3 &&  indexactual == nuevaPantalla) {
+                //setea y activa el indice si es mayor q 3 (a partir de la tercer pantalla y si estan igualados, es decir, cuando haces para atras lo espera hasta volver a igualarse)
+                setIndex(indexactual);
+            }
+            
+            //actualiza el indice
+            indexactual = nuevaPantalla+1;
+
+        } else if (direccion == 'back') {
+            nuevaPantalla = parseInt(pantallaActual)-1;
+        } else {
+            console.log('error, no indica direccion');
+            return true;
+        }
+        
+        //cambia las pantallas
+        setScreenFormulario( nuevaPantalla )
+
+    });
+
 }//initFormularios()
 
 
 //va navegando por las pantallas del formulario
 function setScreenFormulario( index ) {
-    console.log(index, indexactual);
+    
     var contenedorPantallas = $('.pantallas-formulario');
     var pantallas = $('.pantalla');
     
@@ -138,12 +188,6 @@ function setScreenFormulario( index ) {
     $(pantallas[index-1]).addClass('activa');
     $(pantallas[index]).removeClass('activa');
 
-
-    if ( indexactual >= 3) {
-        setIndex(indexactual);
-    }
-
-    indexactual = index+1;
 }
 
 
@@ -196,3 +240,19 @@ function setIndex( index ) {
         break;
     }
 }//setIndex()
+
+/*
+* FUNCIONES DE LOS LABEL
+*/
+//función que hace zoom out a las etiquetas para escribir en los input:
+function zoomOutLabel( input ) {
+    var contenedor = $(input).closest('.form-group')
+    var label = $(contenedor).find('label')
+    $(label).addClass('on');
+}
+//funcion al hacer click en label
+function focusInput( label ) {
+    var contenedor = $(label).closest('.form-group')
+    var input = $(contenedor).find('input')
+    $(input).focus();
+}

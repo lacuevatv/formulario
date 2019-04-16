@@ -32,56 +32,225 @@
                 <form class="formulario" method="POST" id="formulario">
                     
                     <ul class="pantallas-formulario">
-                        <li class="pantalla">
-                            <h3>
-                                Solicitud de inscripción
-                            </h3>
-                        </li>
-                        <li class="pantalla">
-                            <h3>
-                                Bienvenidx al mundo Auckland!
-                            </h3>
-                        </li>
-                        <li class="pantalla">
-                            <h3>
-                                Datos del pasajero
-                            </h3>
-                            Identidad, domicilio
+        <!-- PANTALLA 1: SOLICITUD -->
+                        <li id="pantalla-1" class="pantalla">
+                            <div class="inner-pantalla">
+                                <div class="intro-text">
+                                    <h3 class="titulo-pantalla">
+                                        Solicitud de inscripción
+                                    </h3>
 
+                                    <p class="description-text-normal">
+                                        Por favor ingresá tu nombre y DNI
+                                    </p>
+                                </div>
+
+                                <div>
+
+                                </div>
+                                
+                                <div class="wrapper-button">
+                                    <button class="btn btn-pantallas" data-direction="next" data-pantalla="1" type="button">
+                                        Comenzar
+                                    </button>
+                                </div>
+                            </div>
                         </li>
-                        <li class="pantalla">
-                            <h3>
-                                Datos del pasajero
-                            </h3>
-                            Contacto, intereses
+                        
+        <!-- PANTALLA 2: BIENVENIDOS -->
+                        <li id="pantalla-2" class="pantalla">
+                            <div class="inner-pantalla">
+                                <div class="intro-text">
+                                    <h3 class="titulo-pantalla">
+                                        Bienvenidx al mundo Auckland!
+                                    </h3>
+
+                                    <p class="description-text-normal">
+                                        texto
+                                    </p>
+                                </div>
+
+                                <div class="wrapper-button">
+                                    <button class="btn btn-pantallas" data-direction="back" data-pantalla="2" type="button">
+                                        Volver
+                                    </button>
+                                    <button class="btn btn-pantallas" data-direction="next" data-pantalla="2" type="button">
+                                        Continuar
+                                    </button>
+                                </div>
+                            </div>
                         </li>
-                        <li class="pantalla">
-                            <h3>
-                                Descuentos
-                            </h3>
+
+        <!-- PANTALLA 3: DATA PASAJERO -->
+                        <li id="pantalla-3" class="pantalla">
+                            <div class="inner-pantalla">
+                                <div class="intro-text">
+                                    <h3 class="titulo-pantalla">
+                                        Datos del pasajero
+                                    </h3>
+
+                                    <p class="description-text-normal">
+                                        Identidad, domicilio
+                                    </p>
+                                </div>
+                                
+
+                                <div class="wrapper-button">
+                                    <button class="btn btn-pantallas" data-direction="back" data-pantalla="3" type="button">
+                                        Volver
+                                    </button>
+                                    <button class="btn btn-pantallas" data-direction="next" data-pantalla="3" type="button">
+                                        Continuar
+                                    </button>
+                                </div>
+                            </div>
                         </li>
-                        <li class="pantalla">
-                            <h3>
-                                Datos Familiares
-                            </h3>
+
+        <!-- PANTALLA 4: DATA PASAJERO -->
+                        <li id="pantalla-4" class="pantalla">
+                            <div class="inner-pantalla">
+                                <div class="intro-text">
+                                    <h3 class="titulo-pantalla">
+                                        Datos del pasajero
+                                    </h3>
+
+                                    <p class="description-text-normal">
+                                        Contacto, intereses
+                                    </p>
+                                </div>
+                                
+
+                                <div class="wrapper-button">
+                                    <button class="btn btn-pantallas" data-direction="back" data-pantalla="4" type="button">
+                                        Volver
+                                    </button>
+                                    <button class="btn btn-pantallas" data-direction="next" data-pantalla="4" type="button">
+                                        Continuar
+                                    </button>
+                                </div>
+                            </div>
                         </li>
-                        <li class="pantalla">
-                            <h3>
-                                Datos Familiares
-                            </h3>
-                            Hermanos
+
+        <!-- PANTALLA 5: DESCUENTOS -->
+                        <li id="pantalla-5" class="pantalla">
+                            <div class="inner-pantalla">
+                                <div class="intro-text">
+                                    <h3 class="titulo-pantalla">
+                                        Descuentos
+                                    </h3>
+
+                                    <p class="description-text-normal">
+                                        texto
+                                    </p>
+                                </div>
+
+                                <div class="wrapper-button">
+                                    <button class="btn btn-pantallas" data-direction="back" data-pantalla="5" type="button">
+                                        Volver
+                                    </button>
+                                    <button class="btn btn-pantallas" data-direction="next" data-pantalla="5" type="button">
+                                        Continuar
+                                    </button>
+                                </div>
+                            </div>
                         </li>
-                        <li class="pantalla">
-                            <h3>
-                                Datos Familiares
-                            </h3>
-                            Adulto responsables
+
+        <!-- PANTALLA 6: DATA FAMILIA -->
+                        <li id="pantalla-6" class="pantalla">
+                            <div class="inner-pantalla">
+                                <div class="intro-text">
+                                    <h3 class="titulo-pantalla">
+                                        Datos familiares
+                                    </h3>
+
+                                    <p class="description-text-normal">
+                                        1 texto
+                                    </p>
+                                </div>
+
+                                <div class="wrapper-button">
+                                    <button class="btn btn-pantallas" data-direction="back" data-pantalla="6" type="button">
+                                        Volver
+                                    </button>
+                                    <button class="btn btn-pantallas" data-direction="next" data-pantalla="6" type="button">
+                                        Continuar
+                                    </button>
+                                </div>
+                            </div>
                         </li>
-                        <li class="pantalla">
-                            <h3>
-                                Datos de la reserva
-                            </h3>
+
+        <!-- PANTALLA 7: DATA FAMILIA, HERMANOS -->
+                        <li id="pantalla-7" class="pantalla">
+                            <div class="inner-pantalla">
+                                <div class="intro-text">
+                                    <h3 class="titulo-pantalla">
+                                        Datos familiares
+                                    </h3>
+
+                                    <p class="description-text-normal">
+                                        hermanos
+                                    </p>
+                                </div>
+
+                                <div class="wrapper-button">
+                                    <button class="btn btn-pantallas" data-direction="back" data-pantalla="7" type="button">
+                                        Volver
+                                    </button>
+                                    <button class="btn btn-pantallas" data-direction="next" data-pantalla="7" type="button">
+                                        Continuar
+                                    </button>
+                                </div>
+                            </div>
                         </li>
+
+        <!-- PANTALLA 8: DATA FAMILIA, ADULTOS RESPONSABLES -->
+                        <li id="pantalla-8" class="pantalla">
+                            <div class="inner-pantalla">
+                                <div class="intro-text">
+                                    <h3 class="titulo-pantalla">
+                                        Datos familiares
+                                    </h3>
+
+                                    <p class="description-text-normal">
+                                        Adulto responsables
+                                    </p>
+                                </div>
+                                
+                                <div class="wrapper-button">
+                                    <button class="btn btn-pantallas" data-direction="back" data-pantalla="8" type="button">
+                                        Volver
+                                    </button>
+                                    <button class="btn btn-pantallas" data-direction="next" data-pantalla="8" type="button">
+                                        Continuar
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
+        <!-- PANTALLA 9: RESERVA -->
+                        <li id="pantalla-9" class="pantalla">
+                            <div class="inner-pantalla">
+                                <div class="intro-text">
+                                    <h3 class="titulo-pantalla">
+                                        Datos de la reserva
+                                    </h3>
+
+                                    <p class="description-text-normal">
+                                        texto
+                                    </p>
+                                </div>
+
+                                <div class="wrapper-button">
+                                    <button class="btn btn-pantallas" data-direction="back" data-pantalla="9" type="button">
+                                        Volver
+                                    </button>
+                                    <button class="btn btn-pantallas" data-direction="next" data-pantalla="9" type="button">
+                                        Continuar
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+
                     </ul>
                     
                 </form>      
