@@ -7,6 +7,7 @@
     @media (min-width: $md) {
         padding: 50px;
         height: 100vh;
+        height: calc(100vh - 100px);
         padding: 70px 122px 0;
     }
     
@@ -294,7 +295,7 @@
                     margin-bottom: 20px;
                     width: 100%;
                     @media (min-width: $md) {
-                        margin-top: 50px;
+                        margin-top: 30px;
                         margin-bottom: 50px;
                         height: 100%;
                         display: flex;

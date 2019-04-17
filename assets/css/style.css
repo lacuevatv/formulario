@@ -349,6 +349,7 @@ html, body {
   .form-wrapper {
     padding: 50px;
     height: 100vh;
+    height: calc(100vh - 100px);
     padding: 70px 122px 0;
   }
 }
@@ -684,7 +685,7 @@ html, body {
 }
 @media (min-width: 992px) {
   .formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-inputs {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
     height: 100%;
     display: flex;
