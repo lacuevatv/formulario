@@ -2,10 +2,10 @@
  * FORMULARIO
 */
 .form-wrapper {
-    border: solid 1px red;
     width: 100%;
-    padding: 50px;
+    padding: 50px 10px;
     @media (min-width: $md) {
+        padding: 50px;
         height: 100%;
         padding: 70px 122px 0;
     }
@@ -226,23 +226,33 @@
                 -o-flex-direction: column;
                 flex-direction: column;
 
-                .intro-text {}
-
                 .titulo-pantalla {
                     text-align: center;
-                    font-size: 38px;
-                    line-height: 42px;
-                    margin-bottom: 20px;
+                    font-size: 20px;
+                    line-height: 22px;
+                    margin-bottom: 10px;
+                    @media (min-width: $xs) {
+                        font-size: 38px;
+                        line-height: 42px;
+                        margin-bottom: 20px;
+                    }
                 }
 
                 .description-text-normal {
-                    font-size: 18px;
-                    line-height: 22px;
+                    font-size: 11px;
+                    line-height: 12px;
                     text-align: center;
+                    @media (min-width: $xs) {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
                 }
 
                 .wrapper-button {
-                    padding: 50px 20px;
+                    padding: 20px 10px;
+                    @media (min-width: $md) {
+                        padding: 50px 20px;
+                    }
 
                     .btn {
                         cursor: pointer;
@@ -252,16 +262,55 @@
                         font-size: 16px;
                         padding: 11px 27px;
                         @include border-radius(40px);
+                        margin: 0 10px;
                         
                         &:hover {
                             zoom: 1;
                             filter: alpha(opacity=90);
                             opacity: 0.9;
                           }
+                    }//.btn
+                }//.wrapper-button
+
+                .wrapper-inputs {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    @media (min-width: $md) {
+                        margin-top: 50px;
+                        margin-bottom: 50px;
+                        height: 100%;
+                        display: flex;
+                        display: -o-flex;
+                        display: -ms-flex;
+                        display: -moz-flex;
+                        display: -webkit-flex;
+                        -webkit-align-items: center;
+                        -moz-align-items: center;
+                        -ms-align-items: center;
+                        -o-align-items: center;
+                        align-items: center;
+                        -webkit-justify-content: center;
+                        -moz-justify-content: center;
+                        -ms-justify-content: center;
+                        -o-justify-content: center;
+                        justify-content: center;
                     }
-                }
-            }
-        }
+                    @media (min-width: $xlg) {
+                        margin-top: 100px;
+                    }
+
+                    .inputs-col {
+                        @media (min-width: $md) {
+                            width: 50%;
+                            height: 100%;
+                        }
+                    }//.inputs-col
+
+                }//.wrapper-inputs
+
+            }//.inner-pantalla
+        }//.pantalla
 
         .pantalla.activa {
             left: 0;
@@ -275,21 +324,9 @@
 //engloba toda la parte del input
 .form-group {
     position: relative;
-    height: 40px;
-    margin-bottom: .5em;
-    border: 1px solid $color-negro;
-    @media (min-width: $xs) {
-        height: 50px;
-    }
-    @media (min-width: $sm) {
-        height: 70px;
-    }
-    @media (min-width: $md) {
-        height: 40px;
-    }
-    @media (min-width: $xlg) {
-        height: 40px;
-    }
+    height: 39px;
+    margin-bottom: 30px;
+    background-color: $color-blanco;
 
     label {
         position: absolute;
@@ -297,16 +334,10 @@
         left: 7px;
         z-index:2;
         cursor: pointer;
-        text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 300;
+        font-size: 16px;
         color: $color-negro;
-        @include transition(all $transitionSpeedx2);
-        @media (min-width: $md) {
-            top: 8px;
-        }
-        @media (min-width: $xlg) {
-            //top: 0;
-        }
+        @include transition(all $transitionSpeed);
     }
 
     label.long-label {
@@ -327,7 +358,7 @@
         font-size: 60%;
         top: -2px;
         z-index:0;
-        @include transition(all $transitionSpeedx2);
+        @include transition(all $transitionSpeed);
     }
     input {
         z-index:1;
@@ -354,6 +385,11 @@
         &:focus {
             outline: none;
         }
+        
+    }
+
+    input:-internal-autofill-selected {
+        background-color: transparent;
     }
 
     //input con contenido escrito
@@ -397,23 +433,27 @@
 
     .msj-error-input {
         position: absolute;
-        top: 2px;
-        right: 2px;
-        font-size: 60%;
-        color: $color-rosa;
+        top: 5px;
+        right: 10px;
+        font-size: 70%;
+        text-align: right;
+        font-family: $fuente-secundaria;
+        font-style: italic;
+        color: #6bc4e8;
         width: 55%;
         text-transform: lowercase;
         line-height: 110%;
         display:none;
-    }
-
-    .msj-error-input-background {
-        top: -13px;
-        padding: 3px;
-        background-color: rgba(255,255,255,0.5);
-    }
-    .msj-error-input-col {
-        right: 45px;
-    }
+    }//.msj-error-input
+    
+    .nota-aclaracion {
+        font-family: $fuente-secundaria;
+        font-style: italic;
+        color: #6bc4e8;
+        font-size: 15px;
+        position: relative;
+        top: 45px;
+        left: 1px;
+    }//.nota-aclaracion
 
 }//.form-group 

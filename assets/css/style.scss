@@ -40,13 +40,6 @@ html, body {
     line-height: 18px;
     font-weight: 500;
     overflow-x: hidden;
-}
-
-.main-wrapper {
-    padding: 18px 15px;
-    height: 100vh;
-    position: relative;
-    z-index: 1;
     background-color: $color-azul;
     background-repeat: no-repeat;
     background-image: url(../images/fondo-mobil.png);
@@ -70,11 +63,18 @@ html, body {
     }
 }
 
+.main-wrapper {
+    padding: 18px 15px;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
 .inner-wrapper {
     height: 100%;
     position: relative;
-    border: 1px solid black;
-    padding: $paddingLeftRight;
+    //border: 1px solid black;
+    //padding: $paddingLeftRight;
 
     @media (min-width: $md) {
         border: none;
