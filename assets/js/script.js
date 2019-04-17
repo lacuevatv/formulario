@@ -123,10 +123,19 @@ function cleanAcentos( cadena ) {
 function initFormularios(){
    
     //coloca la primer pantalla para empezar
-    setScreenFormulario(indexactual);
+    /*
+    CAMBIAR ESTO
+    */
+    console.error('Cambiar initformularios, que manualmente estoy montando las pantallas para hacer mas facil la edicion');
+    //setScreenFormulario(indexactual);
+    setScreenFormulario(3);
 
     //clic en label, focus en input
     $(document).on('click', 'label', function(){
+        debugger;
+        if ( $(this).attr('data-animate') == 'false' ) {
+            return true;    
+        }
         focusInput( this );
     });
 

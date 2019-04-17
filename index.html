@@ -48,37 +48,43 @@
 
                                 <div class="wrapper-inputs">
                                     <div class="inputs-col">
-                                        <div class="form-group">
-                                            <input type="text" name="name" required>
-                                            <label for="name">Nombre</label>
-                                            <span class="msj-error-input">
-                                                Este campo es requerido
-                                            </span>
-                                            <span class="nota-aclaracion"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="lastname" required>
-                                            <label for="lastname">Apellido</label>
-                                            <span class="msj-error-input">
-                                                Este campo es requerido
-                                            </span>
-                                            <span class="nota-aclaracion"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="dni">
-                                            <label for="dni">DNI<sup>*</sup></label>
-                                            <span class="msj-error-input">
-                                                Este campo es requerido
-                                            </span>
-                                            <span class="nota-aclaracion">
-                                                <sup>*</sup>Este campo es obligatorio
-                                            </span>
-                                        </div>
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="name" required>
+                                                <label for="name">Nombre</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion"></span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="lastname" required>
+                                                <label for="lastname">Apellido</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion"></span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="dni">
+                                                <label for="dni">DNI<sup>*</sup></label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Este campo es obligatorio
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
                                     </div><!--//.inputs-col-->
                                 </div><!--//.wrapper-inputs-->
                                 
 
-                                <div class="wrapper-button">
+                                <div class="wrapper-button mt-30 wrapper-button-fixed">
                                     <button class="btn btn-pantallas" data-direction="next" data-pantalla="1" type="button">
                                         Comenzar
                                     </button>
@@ -94,39 +100,12 @@
                                         Bienvenidx al mundo Auckland!
                                     </h3>
 
-                                    <p class="description-text-normal">
-                                        texto
+                                    <p class="description-text-normal description-text-small-width">
+                                        Por favor completá todos los campos a continuación para dar de alta tu viaje, activar tu ID y comenzar a disfrutar de todos los beneficios que tenemos para vos.
                                     </p>
                                 </div>
 
-                                <div class="wrapper-inputs">
-                                    <div class="inputs-col">
-                                        <div class="form-group">
-                                            <input type="text" name="name">
-                                            <label for="name">Nombre</label>
-                                            <span class="msj-error-input">
-                                                Este campo nos ayuda a comunicarnos
-                                            </span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="name">
-                                            <label for="name">Nombre</label>
-                                            <span class="msj-error-input">
-                                                Este campo nos ayuda a comunicarnos
-                                            </span>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="name">
-                                            <label for="name">Nombre</label>
-                                            <span class="msj-error-input">
-                                                Este campo nos ayuda a comunicarnos
-                                            </span>
-                                        </div>
-                                    </div><!--//.inputs-col-->
-                                </div><!--//.wrapper-inputs-->
-
-
-                                <div class="wrapper-button">
+                                <div class="wrapper-button mt-50 wrapper-button-fixed">
                                     <button class="btn btn-pantallas" data-direction="back" data-pantalla="2" type="button">
                                         Volver
                                     </button>
@@ -144,12 +123,152 @@
                                     <h3 class="titulo-pantalla">
                                         Datos del pasajero
                                     </h3>
-
-                                    <p class="description-text-normal">
-                                        Identidad, domicilio
-                                    </p>
                                 </div>
                                 
+                                <div class="wrapper-inputs">
+                                    <div class="inputs-col mr-3porcentaje-md">
+                                        <div class="col-title">
+                                            Identidad
+                                        </div>
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="name2">
+                                                <label for="name2">Nombre</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="lastname2">
+                                                <label for="lastname2">Apellido</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="label-row">
+                                                Sexo
+                                            </div>
+                                            <div class="form-group form-group-checktype form-group-3">
+                                                <span class="label-checkbox">Masculino</span>
+                                                <input type="radio" name="sexo" value="masculino">
+                                            </div>
+                                            <div class="form-group form-group-checktype form-group-3">
+                                                <span class="label-checkbox">Femenino</span>
+                                                <input type="radio" name="sexo" value="femenino">
+                                            </div>
+                                            <div class="form-group form-group-checktype form-group-2">
+                                                <span class="label-checkbox">Otro</span>
+                                                <input type="radio" name="sexo" value="otro">
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                        
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="form-group form-group-3">
+                                                <input type="text" name="tipodoc">
+                                                <label for="tipodoc">Tipo Doc.</label>
+                                                <span class="msj-error-input">
+                                                    Requerido
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-7">
+                                                <input type="text" name="numerodoc">
+                                                <label for="numerodoc">Nro. Doc.</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="label-row">
+                                                Fecha de nacimiento
+                                            </div>
+                                            <div class="form-group form-group-4">
+                                                <input type="date" name="fechanacimiento">
+                                                <label for="fechanacimiento">DD/MM/AAA</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                    </div><!--//.inputs-col-->
+                                    
+                                    <div class="inputs-col ml-3porcentaje-md">
+                                        <div class="col-title">
+                                            Domicilio
+                                        </div>
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="address-calle">
+                                                <label for="address-calle">Calle</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="form-group form-group-3">
+                                                <input type="text" name="address-nro">
+                                                <label for="address-nro">Nro.</label>
+                                                <span class="msj-error-input">
+                                                    Requerido
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-3">
+                                                <input type="text" name="address-piso">
+                                                <label for="address-piso">Piso</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-3">
+                                                <input type="text" name="address-depto">
+                                                <label for="address-depto">Depto</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="form-group form-group-5">
+                                                <input type="text" name="localidad">
+                                                <label for="localidad">Localidad</label>
+                                                <span class="msj-error-input">
+                                                    Requerido
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-5">
+                                                <input type="text" name="codigopostal">
+                                                <label for="codigopostal">Cód. Postal</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="provincia">
+                                                <label for="provincia">Provincia</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                        
+                                    </div><!--//.inputs-col-->
+
+                                </div><!--//.wrapper-inputs-->
 
                                 <div class="wrapper-button">
                                     <button class="btn btn-pantallas" data-direction="back" data-pantalla="3" type="button">

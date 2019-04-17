@@ -213,6 +213,7 @@ html, body {
   background-image: url(../images/fondo-mobil.png);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   html, body {
@@ -239,6 +240,11 @@ html, body {
   height: 100vh;
   position: relative;
   z-index: 1;
+}
+@media (min-width: 992px) {
+  .main-wrapper {
+    height: auto;
+  }
 }
 
 .inner-wrapper {
@@ -267,6 +273,26 @@ html, body {
 @media (min-width: 992px) {
   .main {
     height: 90%;
+  }
+}
+
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+@media (min-width: 992px) {
+  .mr-3porcentaje-md {
+    margin-right: 3% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .ml-3porcentaje-md {
+    margin-left: 3% !important;
   }
 }
 
@@ -322,7 +348,7 @@ html, body {
 @media (min-width: 992px) {
   .form-wrapper {
     padding: 50px;
-    height: 100%;
+    height: 100vh;
     padding: 70px 122px 0;
   }
 }
@@ -599,13 +625,24 @@ html, body {
 }
 .formulario .pantallas-formulario .pantalla .inner-pantalla .description-text-normal {
   font-size: 11px;
-  line-height: 12px;
+  line-height: 14px;
   text-align: center;
 }
 @media (min-width: 576px) {
   .formulario .pantallas-formulario .pantalla .inner-pantalla .description-text-normal {
     font-size: 18px;
     line-height: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .formulario .pantallas-formulario .pantalla .inner-pantalla .description-text-small-width {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1600px) {
+  .formulario .pantallas-formulario .pantalla .inner-pantalla .description-text-small-width {
+    width: 50%;
   }
 }
 .formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-button {
@@ -634,8 +671,14 @@ html, body {
   filter: alpha(opacity=90);
   opacity: 0.9;
 }
+@media (max-width: 992px) and (orientation: portrait) {
+  .formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-button-fixed {
+    position: fixed;
+    bottom: 20px;
+  }
+}
 .formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-inputs {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -672,6 +715,35 @@ html, body {
     height: 100%;
   }
 }
+.formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-inputs .inputs-col .col-title {
+  font-weight: 500;
+  color: #fff;
+  font-size: 18px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+.formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-inputs .inputs-col .inputs-row {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+}
+.formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-inputs .inputs-col .inputs-row .label-row {
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-inputs .inputs-col .row-flex-space-between {
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
 .formulario .pantallas-formulario .pantalla.activa {
   left: 0;
 }
@@ -679,6 +751,7 @@ html, body {
 .form-group {
   position: relative;
   height: 39px;
+  width: 100%;
   margin-bottom: 30px;
   background-color: #fff;
 }
@@ -728,6 +801,7 @@ html, body {
   border: 0;
   background: transparent;
   font-size: 100%;
+  font-family: "Gotham HTF", "Open Sans", sans-serif;
 }
 @media (min-width: 576px) {
   .form-group input {
@@ -806,6 +880,58 @@ html, body {
   position: relative;
   top: 45px;
   left: 1px;
+}
+
+.form-group-checktype {
+  background-color: transparent;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+.form-group-checktype input[type=radio] {
+  width: 39px;
+  height: 39px;
+  position: relative;
+}
+.form-group-checktype .label-checkbox {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-group-7 {
+  width: 68%;
+}
+
+.form-group-6 {
+  width: 58%;
+}
+
+.form-group-4 {
+  width: 38%;
+}
+
+.form-group-3 {
+  width: 28%;
+}
+
+.form-group-5 {
+  width: 48%;
+}
+
+.form-group-2 {
+  width: 18%;
 }
 
 /*# sourceMappingURL=style.css.map */

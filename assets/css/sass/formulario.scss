@@ -6,7 +6,7 @@
     padding: 50px 10px;
     @media (min-width: $md) {
         padding: 50px;
-        height: 100%;
+        height: 100vh;
         padding: 70px 122px 0;
     }
     
@@ -240,11 +240,21 @@
 
                 .description-text-normal {
                     font-size: 11px;
-                    line-height: 12px;
+                    line-height: 14px;
                     text-align: center;
                     @media (min-width: $xs) {
                         font-size: 18px;
                         line-height: 22px;
+                    }
+                }
+
+                .description-text-small-width {
+                    @media (min-width: $lg) {
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+                    @media (min-width: $xlg) {
+                        width: 50%;
                     }
                 }
 
@@ -272,8 +282,15 @@
                     }//.btn
                 }//.wrapper-button
 
+                .wrapper-button-fixed {
+                    @media (max-width: $md) and (orientation:portrait) {
+                    position: fixed;
+                    bottom: 20px;
+                    }
+                }
+
                 .wrapper-inputs {
-                    margin-top: 20px;
+                    margin-top: 40px;
                     margin-bottom: 20px;
                     width: 100%;
                     @media (min-width: $md) {
@@ -305,6 +322,40 @@
                             width: 50%;
                             height: 100%;
                         }
+
+                        .col-title {
+                            font-weight: 500;
+                            color: $color-blanco;
+                            font-size: 18px;
+                            border-bottom: 1px solid $color-blanco;
+                            margin-bottom: 30px;
+                            padding-bottom: 10px;
+                        }//.col-title
+
+                        .inputs-row {
+                            display: flex;
+                            display: -o-flex;
+                            display: -ms-flex;
+                            display: -moz-flex;
+                            display: -webkit-flex;
+
+                            .label-row {
+                                font-weight: 500;
+                                font-size: 16px;
+                                color: $color-blanco;
+                                margin-right: 20px;
+                                margin-top: 10px;
+                            }//.label-row
+
+                        }//.inputs-row
+
+                        .row-flex-space-between {
+                            -webkit-justify-content: space-between;
+                            -moz-justify-content: space-between;
+                            -ms-justify-content: space-between;
+                            -o-justify-content: space-between;
+                            justify-content: space-between;
+                        }
                     }//.inputs-col
 
                 }//.wrapper-inputs
@@ -325,6 +376,7 @@
 .form-group {
     position: relative;
     height: 39px;
+    width: 100%;
     margin-bottom: 30px;
     background-color: $color-blanco;
 
@@ -370,6 +422,7 @@
         border: 0;
         background: transparent;
         font-size: 100%;
+        font-family: $fuente-principal;
         @media (min-width: $xs) {
             height: 30px;
         }
@@ -457,3 +510,58 @@
     }//.nota-aclaracion
 
 }//.form-group 
+
+.form-group-checktype {
+    background-color: transparent;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+
+    input[type=radio] {
+        width: 39px;
+        height: 39px;
+        position: relative;
+    }
+
+    .label-checkbox {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}//.form-group-checktype
+
+
+.form-group-7 {
+    width: 68%;
+}
+
+.form-group-6 {
+    width: 58%;
+}
+
+.form-group-4 {
+    width: 38%;
+}
+
+.form-group-3 {
+    width: 28%;
+}
+
+.form-group-5 {
+    width: 48%;
+}
+
+.form-group-2 {
+    width: 18%;
+}
