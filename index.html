@@ -288,11 +288,124 @@
                                     <h3 class="titulo-pantalla">
                                         Datos del pasajero
                                     </h3>
-
-                                    <p class="description-text-normal">
-                                        Contacto, intereses
-                                    </p>
                                 </div>
+
+                                <div class="wrapper-inputs">
+                                    <div class="inputs-col mr-3porcentaje-md">
+                                        <div class="col-title">
+                                            Contacto
+                                        </div>
+                                        
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="label-row form-group-2-only-mov">
+                                                Tel.Part.:&nbsp;
+                                            </div>
+                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                                <input type="text" name="telpart_cod">
+                                                <label for="telpart_cod">Cod.area</label>
+                                                <span class="msj-error-input">
+                                                    Requerido
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-6 form-group-4-only-mov">
+                                                <input type="text" name="telpart_numero">
+                                                <label for="telpart_numero">Número</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="label-row form-group-2-only-mov">
+                                                Tel.móvil:
+                                            </div>
+                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                                <input type="text" name="telmovil_cod">
+                                                <label for="telmovil_cod">Cod.area</label>
+                                                <span class="msj-error-input">
+                                                    Requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 0
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-4-only-mov form-group-6">
+                                                <input type="text" name="telmovil_numero">
+                                                <label for="telmovil_numero">Número</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 15
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="email">
+                                                <label for="email">Email</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                    </div><!--//.inputs-col-->
+                                    
+                                    <div class="inputs-col ml-3porcentaje-md">
+                                        <div class="col-title">
+                                            Intereses
+                                        </div>
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="lugares_conocer">
+                                                <label for="lugares_conocer">¿Qué lugares del mundo te gustaría conocer?</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="regalo_preferido">
+                                                <label for="regalo_preferido">¿Cuál sería tu regalo preferido?</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                        
+                                        <div class="inputs-row">
+                                            <div class="label-row form-group-5">
+                                                ¿Practicas deporte?
+                                            </div>
+                                            <div class="form-group form-group-checktype form-group-2 mr-min-3">
+                                                <span class="label-checkbox">Sí</span>
+                                                <input type="radio" name="practicas_deportes" value="si">
+                                            </div>
+                                            <div class="form-group form-group-checktype form-group-2">
+                                                <span class="label-checkbox">No</span>
+                                                <input type="radio" name="practicas_deportes" value="no">
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="label-row form-group-5">
+                                                ¿Querés recibir info de promociones y beneficios?
+                                            </div>
+                                            <div class="form-group form-group-checktype form-group-2">
+                                                <input type="checkbox" name="recibir_info" checked>
+                                            </div>
+                                            
+                                        </div><!--//.inputs-row-->
+                                        
+                                    </div><!--//.inputs-col-->
+
+                                </div><!--//.wrapper-inputs-->
                                 
 
                                 <div class="wrapper-button">
@@ -311,13 +424,27 @@
                             <div class="inner-pantalla">
                                 <div class="intro-text">
                                     <h3 class="titulo-pantalla">
-                                        Descuentos
+                                        ¿Querés obtener descuentos para vos y tu familia?
                                     </h3>
-
-                                    <p class="description-text-normal">
-                                        texto
-                                    </p>
                                 </div>
+
+                                <div class="wrapper-inputs">
+                                    <div class="inputs-col mr-3porcentaje-md">
+                                            
+                                        <div class="inputs-row row-flex-center">
+                                            <div class="form-group form-group-checktype form-group-2 mr-min-3">
+                                                <span class="label-checkbox">Sí</span>
+                                                <input type="radio" name="obtener_descuentos" value="si">
+                                            </div>
+                                            <div class="form-group form-group-checktype form-group-2">
+                                                <span class="label-checkbox">No</span>
+                                                <input type="radio" name="obtener_descuentos" value="no">
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                
+                                    </div><!--//.inputs-col-->
+
+                                </div><!--//.wrapper-inputs-->
 
                                 <div class="wrapper-button">
                                     <button class="btn btn-pantallas" data-direction="back" data-pantalla="5" type="button">
@@ -337,11 +464,44 @@
                                     <h3 class="titulo-pantalla">
                                         Datos familiares
                                     </h3>
-
-                                    <p class="description-text-normal">
-                                        1 texto
-                                    </p>
                                 </div>
+                                <div class="wrapper-inputs">
+                                    <div class="inputs-col mr-3porcentaje-md">
+                                        <div class="col-title">
+                                            Hermanxs
+                                        </div>
+                                            
+                                        <div class="inputs-row">
+                                            <div class="label-row form-group-5">
+                                                ¿Tenés hermanxs?
+                                            </div>
+                                            <div class="form-group form-group-checktype form-group-2 mr-min-3">
+                                                <span class="label-checkbox">Sí</span>
+                                                <input type="radio" name="hermanos" value="si" checked>
+                                            </div>
+                                            <div class="form-group form-group-checktype form-group-2">
+                                                <span class="label-checkbox">No</span>
+                                                <input type="radio" name="hermanos" value="no">
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <select type="text" name="cuantos_hermanos">
+                                                    <option>¿Cuántos?</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                    </div><!--//.inputs-col-->
+
+                                </div><!--//.wrapper-inputs-->
 
                                 <div class="wrapper-button">
                                     <button class="btn btn-pantallas" data-direction="back" data-pantalla="6" type="button">
@@ -361,11 +521,137 @@
                                     <h3 class="titulo-pantalla">
                                         Datos familiares
                                     </h3>
-
-                                    <p class="description-text-normal">
-                                        hermanos
-                                    </p>
                                 </div>
+
+                                <div class="wrapper-inputs wrapper-inputs-onecolumn">
+                                    <div class="inputs-col">
+                                        <div class="col-title">
+                                            Hermanx
+                                        </div>
+                                        
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="hermano_apellido">
+                                                <label for="hermano_apellido">Apellido</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="hermano_nombre">
+                                                <label for="hermano_nombre">Nombre</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="label-row form-group-2-only-mov">
+                                                Tel.móvil:
+                                            </div>
+                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                                <input type="text" name="hermano_telmovil_cod">
+                                                <label for="hermano_telmovil_cod">Cod.area</label>
+                                                <span class="msj-error-input">
+                                                    Requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 0
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-4-only-mov form-group-6">
+                                                <input type="text" name="hermano_telmovil_numero">
+                                                <label for="hermano_telmovil_numero">Número</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 15
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="email">
+                                                <label for="hermano_email">Email</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                    </div><!--//.inputs-col-->
+                                    
+                                    <div class="inputs-col">
+                                        <div class="col-title">
+                                            Hermanx
+                                        </div>
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="hermano_apellido">
+                                                <label for="hermano_apellido">Apellido</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="hermano_nombre">
+                                                <label for="hermano_nombre">Nombre</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="label-row form-group-2-only-mov">
+                                                Tel.móvil:
+                                            </div>
+                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                                <input type="text" name="hermano_telmovil_cod">
+                                                <label for="hermano_telmovil_cod">Cod.area</label>
+                                                <span class="msj-error-input">
+                                                    Requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 0
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-4-only-mov form-group-6">
+                                                <input type="text" name="hermano_telmovil_numero">
+                                                <label for="hermano_telmovil_numero">Número</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 15
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="email">
+                                                <label for="hermano_email">Email</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                        
+                                        
+                                    </div><!--//.inputs-col-->
+
+                                </div><!--//.wrapper-inputs-->
 
                                 <div class="wrapper-button">
                                     <button class="btn btn-pantallas" data-direction="back" data-pantalla="7" type="button">
@@ -385,12 +671,165 @@
                                     <h3 class="titulo-pantalla">
                                         Datos familiares
                                     </h3>
-
-                                    <p class="description-text-normal">
-                                        Adulto responsables
-                                    </p>
                                 </div>
                                 
+                                <div class="wrapper-inputs">
+                                    <div class="inputs-col mr-3porcentaje-md">
+                                        <div class="col-title">
+                                            Adulto responsable 1
+                                        </div>
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <select type="text" name="a_responsable_1_caracter">
+                                                    <option>Carácter</option>
+                                                    <option value="madre">Madre</option>
+                                                    <option value="padre">Padre</option>
+                                                    <option value="tutor">Tutor</option>
+                                                    <option value="encargado">Encargado</option>
+                                                </select>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="a_responsable_1_apellido">
+                                                <label for="a_responsable_1_apellido">Apellido</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="a_responsable_1_nombre">
+                                                <label for="a_responsable_1_nombre">Nombre</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="label-row form-group-2-only-mov">
+                                                Tel.móvil:
+                                            </div>
+                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                                <input type="text" name="a_responsable_1_telmovil_cod">
+                                                <label for="a_responsable_1_telmovil_cod">Cod.area</label>
+                                                <span class="msj-error-input">
+                                                    Requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 0
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-4-only-mov form-group-6">
+                                                <input type="text" name="a_responsable_1_telmovil_numero">
+                                                <label for="a_responsable_1_telmovil_numero">Número</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 15
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="a_responsable_1_email">
+                                                <label for="a_responsable_1_email">Email</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                    </div><!--//.inputs-col-->
+                                    
+                                    <div class="inputs-col ml-3porcentaje-md">
+                                        <div class="col-title">
+                                            Adulto responsable 2
+                                        </div>
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <select type="text" name="a_responsable_2_caracter">
+                                                    <option>Carácter</option>
+                                                    <option value="madre">Madre</option>
+                                                    <option value="padre">Padre</option>
+                                                    <option value="tutor">Tutor</option>
+                                                    <option value="encargado">Encargado</option>
+                                                </select>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="a_responsable_2_apellido">
+                                                <label for="a_responsable_2_apellido">Apellido</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="a_responsable_2_nombre">
+                                                <label for="a_responsable_2_nombre">Nombre</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row row-flex-space-between">
+                                            <div class="label-row form-group-2-only-mov">
+                                                Tel.móvil:
+                                            </div>
+                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                                <input type="text" name="a_responsable_2_telmovil_cod">
+                                                <label for="a_responsable_2_telmovil_cod">Cod.area</label>
+                                                <span class="msj-error-input">
+                                                    Requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 0
+                                                </span>
+                                            </div>
+                                            <div class="form-group form-group-4-only-mov form-group-6">
+                                                <input type="text" name="a_responsable_2_telmovil_numero">
+                                                <label for="a_responsable_2_telmovil_numero">Número</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    <sup>*</sup>Sin 15
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="a_responsable_2_email">
+                                                <label for="a_responsable_2_email">Email</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+        
+                                    </div><!--//.inputs-col-->
+
+                                </div><!--//.wrapper-inputs-->
+
                                 <div class="wrapper-button">
                                     <button class="btn btn-pantallas" data-direction="back" data-pantalla="8" type="button">
                                         Volver
@@ -409,18 +848,124 @@
                                     <h3 class="titulo-pantalla">
                                         Datos de la reserva
                                     </h3>
-
-                                    <p class="description-text-normal">
-                                        texto
-                                    </p>
                                 </div>
 
+                                <div class="wrapper-inputs">
+                                    <div class="inputs-col">
+                                        <div class="col-title">
+                                            Tipo de viaje
+                                        </div>
+
+                                        <div class="inputs-row row-flex-space-between inputs-row-no-movil">
+                                            <div class="inner-cols-row">
+                                                <div class="label-row form-group-8">
+                                                    Viaje de egresados primaria
+                                                </div>
+                                                <div class="form-group form-group-checktype form-group-1">
+                                                    <input type="checkbox" name="tipo_viaje" value="egresados-primaria">
+                                                </div>
+
+                                                <div class="label-row form-group-8">
+                                                    Viaje de egresados secundaria
+                                                </div>
+                                                <div class="form-group form-group-checktype form-group-1">
+                                                    <input type="checkbox" name="tipo_viaje" value="egresados-secundaria">
+                                                </div>
+
+                                                <div class="label-row form-group-8">
+                                                    Turismo Universitario
+                                                </div>
+                                                <div class="form-group form-group-checktype form-group-1">
+                                                    <input type="checkbox" name="tipo_viaje" value="turismo-universitario">
+                                                </div>
+                                            </div><!--//.inner-cols-row-->
+                                            <div class="inner-cols-row">
+                                                <div class="label-row form-group-8">
+                                                    Turismo educativo
+                                                </div>
+                                                <div class="form-group form-group-checktype form-group-1">
+                                                    <input type="checkbox" name="tipo_viaje" value="turismo-educativo">
+                                                </div>
+
+                                                <div class="label-row form-group-8">
+                                                    Viaje deportivo
+                                                </div>
+                                                <div class="form-group form-group-checktype form-group-1">
+                                                    <input type="checkbox" name="tipo_viaje" value="viaje-deportivo">
+                                                </div>
+                                                <div class="label-row form-group-8">
+                                                    Viaje de quince
+                                                </div>
+                                                <div class="form-group form-group-checktype form-group-1">
+                                                    <input type="checkbox" name="tipo_viaje" value="viaje-quince">
+                                                </div>
+
+                                                <div class="label-row form-group-8">
+                                                    Paquete Turístico
+                                                </div>
+                                                <div class="form-group form-group-checktype form-group-1">
+                                                    <input type="checkbox" name="tipo_viaje" value="paquete-turistico">
+                                                </div>
+                                            </div><!--//.inner-cols-row-->
+
+                                            
+                                        </div><!--//.inputs-row-->
+                                        
+                                        <div class="inputs-row row-flex-space-between inputs-row-column-movil">
+                                            <div class="form-group form-group-5-only-pc">
+                                                <input type="text" name="destino_viaje">
+                                                <label for="destino_viaje">Destino de viaje</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion"></span>
+                                            </div>
+
+                                            <div class="form-group form-group-5-only-pc">
+                                                <input type="text" name="id_reserva_contrato">
+                                                <label for="id_reserva_contrato">ID de reserva / Contrato</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion"></span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+                                            <div class="form-group">
+                                                <input type="text" name="colegio_universidad">
+                                                <label for="colegio_universidad">Colegio / Universidad</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion">
+                                                    *Por favor completar el campo con el nombre formal de la institución
+                                                </span>
+                                            </div>
+                                        </div><!--//.inputs-row-->
+
+                                        <div class="inputs-row">
+
+                                            <div class="form-group">
+                                                <input type="text" name="division_turno_carrera">
+                                                <label for="division_turno_carrera">División y Turno / Carrera</label>
+                                                <span class="msj-error-input">
+                                                    Este campo es requerido
+                                                </span>
+                                                <span class="nota-aclaracion"></span>
+                                            </div>
+
+                                        </div><!--//.inputs-row-->
+        
+                                    </div><!--//.inputs-col-->
+
+                                </div><!--//.wrapper-inputs-->
                                 <div class="wrapper-button">
                                     <button class="btn btn-pantallas" data-direction="back" data-pantalla="9" type="button">
                                         Volver
                                     </button>
                                     <button class="btn btn-pantallas" data-direction="next" data-pantalla="9" type="button">
-                                        Continuar
+                                        Confirmar
                                     </button>
                                 </div>
                             </div>

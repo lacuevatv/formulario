@@ -8,6 +8,9 @@
         padding: 50px;
         height: 100vh;
         height: calc(100vh - 100px);
+        padding: 30px 25px 0;
+    }
+    @media (min-width: $lg) {
         padding: 70px 122px 0;
     }
     
@@ -227,6 +230,10 @@
                 -o-flex-direction: column;
                 flex-direction: column;
 
+                .intro-text {
+                    width: 100%;
+                }
+
                 .titulo-pantalla {
                     text-align: center;
                     font-size: 20px;
@@ -236,6 +243,11 @@
                         font-size: 38px;
                         line-height: 42px;
                         margin-bottom: 20px;
+                    }
+                    @media (min-width: $md) {
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 65%;
                     }
                 }
 
@@ -348,6 +360,28 @@
                                 margin-top: 10px;
                             }//.label-row
 
+                            .inner-cols-row {
+                                width: 100%;
+                                display: flex;
+                                display: -o-flex;
+                                display: -ms-flex;
+                                display: -moz-flex;
+                                display: -webkit-flex;
+                                -webkit-justify-content: space-between;
+                                -moz-justify-content: space-between;
+                                -ms-justify-content: space-between;
+                                -o-justify-content: space-between;
+                                justify-content: space-between;
+                                -webkit-flex-wrap: wrap;
+                                -moz-flex-wrap: wrap;
+                                -ms-flex-wrap: wrap;
+                                -o-flex-wrap: wrap;
+                                flex-wrap: wrap;
+                                @media (min-width: $xs) {
+                                    width: 45%;
+                                }
+                            }
+
                         }//.inputs-row
 
                         .row-flex-space-between {
@@ -357,9 +391,46 @@
                             -o-justify-content: space-between;
                             justify-content: space-between;
                         }
+
+                        .row-flex-center {
+                            -webkit-justify-content: center;
+                            -moz-justify-content: center;
+                            -ms-justify-content: center;
+                            -o-justify-content: center;
+                            justify-content: center;
+                        }
+
+                        .inputs-row-column-movil {
+                            @media (max-width: $xs) {
+                                -webkit-flex-wrap: wrap;
+                                -moz-flex-wrap: wrap;
+                                -ms-flex-wrap: wrap;
+                                -o-flex-wrap: wrap;
+                                flex-wrap: wrap;
+                            }
+                        }
+
+                        .inputs-row-no-movil {
+                            @media (max-width: $xs) {
+                                display: block;
+                            }
+
+                        }
                     }//.inputs-col
 
                 }//.wrapper-inputs
+
+                .wrapper-inputs-onecolumn {
+                    flex-wrap: wrap;
+                    //height: calc(380px * 2);
+
+                    .inputs-col {
+                        @media (min-width: $md) {
+                            height: 380px;
+                            width: 52%;
+                        }
+                    }
+                }
 
             }//.inner-pantalla
         }//.pantalla
@@ -413,7 +484,7 @@
         z-index:0;
         @include transition(all $transitionSpeed);
     }
-    input {
+    input, select {
         z-index:1;
         height: 25px;
         position: absolute;
@@ -423,6 +494,8 @@
         border: 0;
         background: transparent;
         font-size: 100%;
+        font-weight: 300;
+        color: $color-negro;
         font-family: $fuente-principal;
         @media (min-width: $xs) {
             height: 30px;
@@ -440,6 +513,14 @@
             outline: none;
         }
         
+    }
+
+    select {
+        bottom: 7px;
+        width: 95%;
+        @media (min-width: $md) {
+            bottom: 4px;
+        }
     }
 
     input:-internal-autofill-selected {
@@ -524,16 +605,32 @@
     -ms-align-items: center;
     -o-align-items: center;
     align-items: center;
-    -webkit-justify-content: space-between;
+    /*-webkit-justify-content: space-between;
     -moz-justify-content: space-between;
     -ms-justify-content: space-between;
     -o-justify-content: space-between;
-    justify-content: space-between;
+    justify-content: space-between;*/
 
     input[type=radio] {
-        width: 39px;
-        height: 39px;
         position: relative;
+        width: 20px;
+        height: 20px;
+        @media (min-width: $md) {
+            width: 39px;
+            height: 39px;
+        }
+        
+        
+    }
+
+    input[type=checkbox] {
+        width: 25px;
+        height: 20px;
+        position: relative;
+        @media (min-width: $md) {
+            width: 46px;
+            height: 39px;
+        }
     }
 
     .label-checkbox {
@@ -542,6 +639,9 @@
     }
 }//.form-group-checktype
 
+.form-group-8 {
+    width: 78%;
+}
 
 .form-group-7 {
     width: 68%;
@@ -565,4 +665,32 @@
 
 .form-group-2 {
     width: 18%;
+}
+
+.form-group-1 {
+    width: 10%;
+}
+
+.form-group-5-only-pc {
+    @media (min-width: $sm) {
+        width: 48%;
+    }
+}
+
+.form-group-2-only-mov {
+    @media (max-width: $xs) {
+        width: 18%;
+    }
+}
+
+.form-group-4-only-mov {
+    @media (max-width: $xs) {
+        width: 38%;
+    }
+}
+
+.form-group-3-only-mov {
+    @media (max-width: $xs) {
+        width: 28%;
+    }
 }

@@ -70,7 +70,7 @@ html, body {
     position: relative;
     z-index: 1;
     @media (min-width: $md) {
-        height: auto;
+        //height: auto;
     }
 }
 
@@ -121,6 +121,14 @@ html, body {
     @media (min-width: $md) {
         margin-left: 3%!important;
     }
+}
+
+.mr-min-2 {
+    margin-right: 2%!important;
+}
+
+.mr-min-3 {
+    margin-right: 2%!important;
 }
 
 /*--------------------------------------------------------------
