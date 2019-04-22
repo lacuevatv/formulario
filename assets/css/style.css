@@ -778,6 +778,12 @@ html, body {
     width: 45%;
   }
 }
+.formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-inputs .inputs-col .inputs-row .inner-cols-row .label-row {
+  width: 70%;
+}
+.formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-inputs .inputs-col .inputs-row .inner-cols-row .form-group {
+  width: 20%;
+}
 .formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-inputs .inputs-col .row-flex-space-between {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
@@ -986,6 +992,7 @@ html, body {
   position: relative;
   width: 20px;
   height: 20px;
+  visibility: hidden;
 }
 @media (min-width: 992px) {
   .form-group-checktype input[type=radio] {
@@ -994,15 +1001,43 @@ html, body {
   }
 }
 .form-group-checktype input[type=checkbox] {
+  opacity: 0;
+  filter: alpha(opacity=0);
   width: 25px;
   height: 20px;
   position: relative;
+  cursor: pointer;
+  z-index: 111;
 }
 @media (min-width: 992px) {
   .form-group-checktype input[type=checkbox] {
     width: 46px;
     height: 39px;
   }
+}
+.form-group-checktype .image-check {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  background-image: url(../images/nocheck.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+}
+@media (min-width: 992px) {
+  .form-group-checktype .image-check {
+    width: 39px;
+    height: 39px;
+  }
+}
+.form-group-checktype input[type=checkbox]:checked + .image-check {
+  background-image: url(../images/check.png);
 }
 .form-group-checktype .label-checkbox {
   font-size: 16px;
