@@ -16,12 +16,14 @@ var baseUrl = 'http://' + window.location.host;
 //var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 var indexactual = 1;
 var totalPantallas = 9;
+var hermanos = 0;//numero de hno, por defecto no hay
 
 /*--------------------------------------------------------------
 1.0 BASE 
 * navigation, scroll to
 --------------------------------------------------------------*/
 $(document).ready(function(){
+
     initFormularios();
 
 });//.ready()
@@ -127,7 +129,7 @@ function cleanAcentos( cadena ) {
 */
 
 function initFormularios(){
-   
+    
     //coloca la primer pantalla para empezar
     setScreenFormulario(indexactual);
 
@@ -197,8 +199,72 @@ function initFormularios(){
 
     });
 
+    //al marcar que se tienen hermanos se agrega uno a la variable hnos, al deseleccionarlo se agrega 0
+    $('input[name="hermanos"]').click(function(){
+        if ( $('input[name="hermanos"]').prop('checked') ) {
+            hermanos = 1;
+        } else {
+            hermanos = 0;
+        }
+    });
+
+    //al seleccionar cant de hermanos se crea el html de hermanos para rellenar
+    $('select[name="cuantos_hermanos"]').change(function(){
+        //se busca cuantos se seleccionaron
+        //se ajusta la variable hermanos
+        hermanos = $(this).val();
+
+        //si hermanos no es un numero es porque no hay nada seleccionado, se corrije eso antes de pasarlo a la funcion siguiente
+        if ( isNaN(parseInt(hermanos)) ) {
+            if ( $('input[name="hermanos"]').prop('checked') ) {
+                hermanos = 1;
+            } else {
+                hermanos = 0;
+            }
+        }
+        
+        //se crea el html
+        html_hermanos( hermanos );
+    });
+
 }//initFormularios()
 
+
+function html_hermanos( cantidadHnos ) {
+    console.log(cantidadHnos)
+    //si la candidad pasada es 0 hay q ver si selecciono el checkbox como afirmativo
+    if ( cantidadHnos <= 1 ) {
+        return true;
+    } else {
+        var contenedor = $('#contenedor_hermanos');
+
+        //primero se fija cuantos ya estan creados, esta info esta registrado en el html, por defecto es 1
+        var cantCreada = $(contenedor).attr('data-cant-hermanos');
+        if ( cantCreada == cantidadHnos || cantCreada > cantidadHnos ) {
+            return true;
+        } else {
+            var html = '';
+            
+            //se fija cuantos crear y lo realiza mediante un loop
+            var cantCrear = cantidadHnos - cantCreada;
+            
+            for (var i = cantCreada; i < cantidadHnos; i++) {
+                var index = parseInt(i)+1;
+                html += crear_html_hermano(index);
+            }
+
+            $(contenedor).append(html);
+            $(contenedor).attr('data-cant-hermanos', cantidadHnos);
+        }
+
+    }
+}
+
+function crear_html_hermano(numero) {
+    var html = '<div class="inputs-col"><div class="col-title">Hermanx '+numero+'</div><div class="inputs-row"><div class="form-group"><input type="text" name="hermano_apellido_'+numero+'"><label for="hermano_apellido'+numero+'">Apellido</label><span class="msj-error-input">Este campo es requerido</span></div></div><div class="inputs-row"><div class="form-group"><input type="text" name="hermano_nombre'+numero+'"><label for="hermano_nombre'+numero+'">Nombre</label><span class="msj-error-input">Este campo es requerido</span></div></div><div class="inputs-row row-flex-space-between"><div class="label-row form-group-2-only-mov">Tel.móvil:</div><div class="form-group form-group-2 form-group-3-only-mov mr-min-2"><input type="text" name="hermano_telmovil_cod'+numero+'"><label for="hermano_telmovil_cod'+numero+'">Cod.area</label><span class="msj-error-input">Requerido</span><span class="nota-aclaracion"><sup>*</sup>Sin 0</span></div><div class="form-group form-group-4-only-mov form-group-6"><input type="text" name="hermano_telmovil_numero'+numero+'"><label for="hermano_telmovil_numero'+numero+'">Número</label><span class="msj-error-input">Este campo es requerido</span><span class="nota-aclaracion"><sup>*</sup>Sin 15</span></div></div><div class="inputs-row"><div class="form-group"><input type="text" name="hermano_email'+numero+'"><label for="hermano_email_'+numero+'">Email</label><span class="msj-error-input">Este campo es requerido</span></div></div></div>';
+
+    return html;
+}
 
 //va navegando por las pantallas del formulario
 function setScreenFormulario( index ) {
