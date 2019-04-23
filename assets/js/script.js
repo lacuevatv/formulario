@@ -13,7 +13,7 @@
 2.4. 
 --------------------------------------------------------------*/
 var baseUrl = 'http://' + window.location.host;
-//var ajaxFileUrl = baseUrl + '/inc/ajax.php';
+var carpetas = '/demo/formulario/';
 var indexactual = 1;
 var totalPantallas = 9;
 var hermanos = 0;//numero de hno, por defecto no hay
@@ -367,7 +367,7 @@ function submitForm() {
 
         formData = new FormData( this );
 
-        var ajaxFileUrl = baseUrl + 'ajax.php';
+        var ajaxFileUrl = baseUrl + carpetas + 'ajax.php';
 
         $.ajax( {
             type: 'POST',
@@ -382,9 +382,11 @@ function submitForm() {
             },
             success: function ( response ) {
                 console.log(response);  
+                alert('email enviado con exito');
             },
             error: function ( ) {
                 console.log('error');
+                alert('hubo un error');
             },
         });//cierre ajax
 
