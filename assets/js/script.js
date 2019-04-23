@@ -230,8 +230,9 @@ function initFormularios(){
 }//initFormularios()
 
 
+//crea el html de los hermanos de acuerdo a su seleccion
 function html_hermanos( cantidadHnos ) {
-    console.log(cantidadHnos)
+    
     //si la candidad pasada es 0 hay q ver si selecciono el checkbox como afirmativo
     if ( cantidadHnos <= 1 ) {
         return true;
@@ -260,6 +261,7 @@ function html_hermanos( cantidadHnos ) {
     }
 }
 
+//esta funcion simplemente aplica un template html y le agrega el numero pasado
 function crear_html_hermano(numero) {
     var html = '<div class="inputs-col"><div class="col-title">Hermanx '+numero+'</div><div class="inputs-row"><div class="form-group"><input type="text" name="hermano_apellido_'+numero+'"><label for="hermano_apellido'+numero+'">Apellido</label><span class="msj-error-input">Este campo es requerido</span></div></div><div class="inputs-row"><div class="form-group"><input type="text" name="hermano_nombre'+numero+'"><label for="hermano_nombre'+numero+'">Nombre</label><span class="msj-error-input">Este campo es requerido</span></div></div><div class="inputs-row row-flex-space-between"><div class="label-row form-group-2-only-mov">Tel.móvil:</div><div class="form-group form-group-2 form-group-3-only-mov mr-min-2"><input type="text" name="hermano_telmovil_cod'+numero+'"><label for="hermano_telmovil_cod'+numero+'">Cod.area</label><span class="msj-error-input">Requerido</span><span class="nota-aclaracion"><sup>*</sup>Sin 0</span></div><div class="form-group form-group-4-only-mov form-group-6"><input type="text" name="hermano_telmovil_numero'+numero+'"><label for="hermano_telmovil_numero'+numero+'">Número</label><span class="msj-error-input">Este campo es requerido</span><span class="nota-aclaracion"><sup>*</sup>Sin 15</span></div></div><div class="inputs-row"><div class="form-group"><input type="text" name="hermano_email'+numero+'"><label for="hermano_email_'+numero+'">Email</label><span class="msj-error-input">Este campo es requerido</span></div></div></div>';
 
