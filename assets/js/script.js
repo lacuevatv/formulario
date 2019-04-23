@@ -159,8 +159,12 @@ function initFormularios(){
 
             //si es la ultima pantalla hay que enviar formulario
             if ( parseInt(pantallaActual) == totalPantallas ) {
-                console.log('estamos en la ultima pantalla, enviar formulario');
+                
+                //ultima pantalla, se envia el formulario
+                submitForm();
+
                 return true;
+                
             }
 
             nuevaPantalla = parseInt(pantallaActual)+1;
@@ -347,4 +351,44 @@ function focusInput( label ) {
     var contenedor = $(label).closest('.form-group')
     var input = $(contenedor).find('input')
     $(input).focus();
+}
+
+
+/*
+ * submit
+*/
+function submitForm() {
+    /*
+     * SUBMIT FORMULARIO
+    */    
+    
+    $('#formulario').submit( function( e ) {
+        e.preventDefault();
+
+        formData = new FormData( this );
+
+        var ajaxFileUrl = baseUrl + 'ajax.php';
+
+        $.ajax( {
+            type: 'POST',
+            url: ajaxFileUrl,
+            data: formData,
+            processData: false,
+            contentType: false,
+            cache: false,
+            //funcion antes de enviar
+            beforeSend: function() {
+                console.log('enviando');
+            },
+            success: function ( response ) {
+                console.log(response);  
+            },
+            error: function ( ) {
+                console.log('error');
+            },
+        });//cierre ajax
+
+    });
+
+    $('#formulario').submit();
 }

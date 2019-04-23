@@ -709,7 +709,7 @@ html, body {
   -moz-border-radius: 40px;
   -ms-border-radius: 40px;
   border-radius: 40px;
-  margin: 0 10px;
+  margin: 10px;
 }
 .formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-button .btn:hover {
   zoom: 1;
