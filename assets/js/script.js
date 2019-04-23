@@ -36,6 +36,12 @@ function scrollToID ( id ) {
         scrollTop: $(id).offset().top -90
     }, 'slow');
 }
+
+function scrollUp () {
+    $('html, body').stop().animate({
+        scrollTop: 0
+    }, 'slow');
+}
 /*
  * funciones de limpieza
 */
@@ -123,12 +129,7 @@ function cleanAcentos( cadena ) {
 function initFormularios(){
    
     //coloca la primer pantalla para empezar
-    /*
-    CAMBIAR ESTO
-    */
-    console.error('Cambiar initformularios, que manualmente estoy montando las pantallas para hacer mas facil la edicion');
-    //setScreenFormulario(indexactual);
-    setScreenFormulario(9);
+    setScreenFormulario(indexactual);
 
     //clic en label, focus en input
     $(document).on('click', 'label', function(){
@@ -150,8 +151,6 @@ function initFormularios(){
         var pantallaActual = $(this).attr('data-pantalla');
         var direccion = $(this).attr('data-direction');
         var nuevaPantalla;
-
-        
 
         //chequea direccion para asignar la pantalla a activar
         if (direccion == 'next') {
@@ -184,6 +183,20 @@ function initFormularios(){
 
     });
 
+    //se ocultan los elementos q deben estar ocultos
+    $('.input-ocultos').hide();
+    //al chekear estos inputs se muestras mas inputs para rellenar
+    $(document).on('click', '.index-checked', function(e){
+        var target = $(this).attr('data-target');
+        var li = $(this).closest('li');
+        var items = $(li).find(target);
+        
+        items.each(function(){
+            $(this).show().css('opacity', '1');
+        });
+
+    });
+
 }//initFormularios()
 
 
@@ -197,6 +210,8 @@ function setScreenFormulario( index ) {
     $(pantallas[index-1]).addClass('activa');
     $(pantallas[index]).removeClass('activa');
 
+    //sube la pantalla
+    scrollUp();
 }
 
 

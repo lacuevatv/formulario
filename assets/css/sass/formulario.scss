@@ -3,7 +3,10 @@
 */
 .form-wrapper {
     width: 100%;
-    padding: 50px 10px;
+    padding: 40px 10px;
+    @media (min-width: $sm) {
+        padding: 50px 10px;
+    }
     @media (min-width: $md) {
         padding: 50px;
         height: 100vh;
@@ -11,7 +14,10 @@
         padding: 30px 25px 0;
     }
     @media (min-width: $lg) {
-        padding: 70px 122px 0;
+        padding: 20px 122px 0;
+    }
+    @media (min-width: $xlg) {
+        padding: 50px 122px;
     }
     
 
@@ -26,6 +32,9 @@
         @media (min-width: $md) {
             right: $paddingLeftRightLG;
             top: 55px;
+        }
+        @media (min-width: $xlg) {
+            right: $paddingLeftRightXLG;
         }
     
         .dots {
@@ -229,6 +238,10 @@
                 -ms-flex-direction: column;
                 -o-flex-direction: column;
                 flex-direction: column;
+                @media (min-width: $xlg) {
+                    padding: 0 250px;
+                }
+                
 
                 .intro-text {
                     width: 100%;
@@ -264,7 +277,7 @@
                 .description-text-small-width {
                     @media (min-width: $lg) {
                         width: 70%;
-                        margin: 0 auto;
+                        margin: 50px auto 0;
                     }
                     @media (min-width: $xlg) {
                         width: 50%;
@@ -273,8 +286,10 @@
 
                 .wrapper-button {
                     padding: 20px 10px;
+                    margin-bottom: 10px;
                     @media (min-width: $md) {
-                        padding: 50px 20px;
+                        padding: 10px 20px 50px;
+                        margin-bottom: 50px;
                     }
 
                     .btn {
@@ -308,18 +323,17 @@
                     width: 100%;
                     @media (min-width: $md) {
                         margin-top: 30px;
-                        margin-bottom: 50px;
-                        height: 100%;
+                        //height: 100%;
                         display: flex;
                         display: -o-flex;
                         display: -ms-flex;
                         display: -moz-flex;
                         display: -webkit-flex;
-                        -webkit-align-items: center;
+                        /*-webkit-align-items: center;
                         -moz-align-items: center;
                         -ms-align-items: center;
                         -o-align-items: center;
-                        align-items: center;
+                        align-items: center;*/
                         -webkit-justify-content: center;
                         -moz-justify-content: center;
                         -ms-justify-content: center;
@@ -333,7 +347,6 @@
                     .inputs-col {
                         @media (min-width: $md) {
                             width: 50%;
-                            height: 100%;
                         }
 
                         .col-title {
@@ -351,6 +364,7 @@
                             display: -ms-flex;
                             display: -moz-flex;
                             display: -webkit-flex;
+                            @include transition(all $transitionSpeed);
 
                             .label-row {
                                 font-weight: 500;
@@ -391,6 +405,11 @@
                             }
 
                         }//.inputs-row
+
+                        .input-ocultos {
+                            opacity: 0;
+                            @include transition(all $transitionSpeed);
+                        }
 
                         .row-flex-space-between {
                             -webkit-justify-content: space-between;
@@ -470,6 +489,13 @@
         font-size: 16px;
         color: $color-negro;
         @include transition(all $transitionSpeed);
+    }
+    
+    label.label-sm {
+        font-size: 13px;
+        @media (min-width: $sm) {
+            font-size: 16px;
+        }
     }
 
     label.long-label {
@@ -593,10 +619,15 @@
         font-family: $fuente-secundaria;
         font-style: italic;
         color: #6bc4e8;
-        font-size: 15px;
+        font-size: 10px;
         position: relative;
-        top: 45px;
+        top: 43px;
         left: 1px;
+        @media (min-width: $xs) {
+            font-size: 15px;
+            top: 45px;
+            left: 1px;
+        }
     }//.nota-aclaracion
 
 }//.form-group 
@@ -620,13 +651,15 @@
     justify-content: space-between;*/
 
     input[type=radio] {
+        opacity: 0;
+        filter: alpha(opacity=0);
         position: relative;
-        width: 20px;
+        width: 100%;
         height: 20px;
-        visibility: hidden;
+        z-index: 111;
+        cursor: pointer;
         @media (min-width: $md) {
-            width: 39px;
-            height: 39px;
+            height: 29px;
         }
         
         
@@ -635,14 +668,13 @@
     input[type=checkbox] {
         opacity: 0;
         filter: alpha(opacity=0);
-        width: 25px;
+        width: 100%;
         height: 20px;
         position: relative;
         cursor: pointer;
         z-index: 111;
         @media (min-width: $md) {
-            width: 46px;
-            height: 39px;
+            height: 29px;
         }
 
     }
@@ -659,12 +691,12 @@
         background-size: contain;
         @include transition(all $transitionSpeed);
         @media (min-width: $md) {
-            width: 39px;
-            height: 39px;
+            width: 29px;
+            height: 29px;
         }
     }
 
-    input[type=checkbox]:checked + .image-check {
+    input[type=checkbox]:checked + .image-check, input[type=radio]:checked + .image-check {
         background-image: url(../images/check.png);
     }
     
@@ -673,7 +705,74 @@
         font-size: 16px;
         font-weight: 500;
     }
+
+    .label-checkbox-sm {
+        font-size: 10px;
+        @media (min-width: $sm) {
+            font-size: 16px;
+        }
+    }
 }//.form-group-checktype
+
+.form-group-checktype2 {
+    background-color: $color-blanco;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    @include border-radius(25px);
+    position: relative;
+    height: 25px;
+    width: 52px;
+    @media (min-width: $md) {
+        height: 29px;
+        width: 55px;
+    }
+
+    .btn-check {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: gray;
+        top: 2px;
+        left: 3px;
+        @include border-radius(50%);
+        @include transition(all $transitionSpeed);
+        @media (min-width: $md) {
+            top: 4px;
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    input[type=checkbox] {
+        filter: alpha(opacity=0);
+        opacity: 0;
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        height: 20px;
+        z-index: 111;
+        @media (min-width: $md) {
+            width: 39px;
+            height: 29px;
+        }
+    }
+
+    input[type=checkbox]:checked + .btn-check {
+        left: calc(95% - 20px);
+        background-color: green;
+        @media (min-width: $md) {
+            left: calc(95% - 21px);
+        }
+    }
+}//.form-group-checktype2
 
 .form-group-8 {
     width: 78%;

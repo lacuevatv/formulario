@@ -85,6 +85,9 @@ html, body {
         margin: 0;
         padding: $paddingLeftRightLG;
     }
+    @media (min-width: $xlg) {
+        padding: 50px $paddingLeftRightXLG;
+    }
 
 }
 

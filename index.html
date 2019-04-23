@@ -155,17 +155,17 @@
                                                 Sexo
                                             </div>
                                             <div class="form-group form-group-checktype form-group-3">
-                                                <span class="label-checkbox">Masculino</span>
+                                                <span class="label-checkbox label-checkbox-sm">Masculino</span>
                                                 <input type="radio" name="sexo" value="masculino">
                                                 <span class="image-check"></span>
                                             </div>
                                             <div class="form-group form-group-checktype form-group-3">
-                                                <span class="label-checkbox">Femenino</span>
+                                                <span class="label-checkbox label-checkbox-sm">Femenino</span>
                                                 <input type="radio" name="sexo" value="femenino">
                                                 <span class="image-check"></span>
                                             </div>
                                             <div class="form-group form-group-checktype form-group-2">
-                                                <span class="label-checkbox">Otro</span>
+                                                <span class="label-checkbox label-checkbox-sm">Otro</span>
                                                 <input type="radio" name="sexo" value="otro">
                                                 <span class="image-check"></span>
                                             </div>
@@ -174,7 +174,7 @@
                                         <div class="inputs-row row-flex-space-between">
                                             <div class="form-group form-group-3">
                                                 <input type="text" name="tipodoc">
-                                                <label for="tipodoc">Tipo Doc.</label>
+                                                <label class="label-sm" for="tipodoc">Tipo Doc.</label>
                                                 <span class="msj-error-input">
                                                     Requerido
                                                 </span>
@@ -194,7 +194,7 @@
                                             </div>
                                             <div class="form-group form-group-4">
                                                 <input type="date" name="fechanacimiento">
-                                                <label for="fechanacimiento">DD/MM/AAA</label>
+                                                <label class="label-sm" for="fechanacimiento">DD/MM/AAA</label>
                                                 <span class="msj-error-input">
                                                     Este campo es requerido
                                                 </span>
@@ -303,7 +303,7 @@
                                             <div class="label-row form-group-2-only-mov">
                                                 Tel.Part.:&nbsp;
                                             </div>
-                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                            <div class="form-group form-group-3 mr-min-2">
                                                 <input type="text" name="telpart_cod">
                                                 <label for="telpart_cod">Cod.area</label>
                                                 <span class="msj-error-input">
@@ -323,7 +323,7 @@
                                             <div class="label-row form-group-2-only-mov">
                                                 Tel.móvil:
                                             </div>
-                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                            <div class="form-group form-group-3 mr-min-2">
                                                 <input type="text" name="telmovil_cod">
                                                 <label for="telmovil_cod">Cod.area</label>
                                                 <span class="msj-error-input">
@@ -365,7 +365,7 @@
                                         <div class="inputs-row">
                                             <div class="form-group">
                                                 <input type="text" name="lugares_conocer">
-                                                <label for="lugares_conocer">¿Qué lugares del mundo te gustaría conocer?</label>
+                                                <label class="label-sm" for="lugares_conocer">¿Qué lugares del mundo te gustaría conocer?</label>
                                                 <span class="msj-error-input">
                                                     Este campo es requerido
                                                 </span>
@@ -375,7 +375,7 @@
                                         <div class="inputs-row">
                                             <div class="form-group">
                                                 <input type="text" name="regalo_preferido">
-                                                <label for="regalo_preferido">¿Cuál sería tu regalo preferido?</label>
+                                                <label class="label-sm" for="regalo_preferido">¿Cuál sería tu regalo preferido?</label>
                                                 <span class="msj-error-input">
                                                     Este campo es requerido
                                                 </span>
@@ -402,9 +402,9 @@
                                             <div class="label-row form-group-5">
                                                 ¿Querés recibir info de promociones y beneficios?
                                             </div>
-                                            <div class="form-group form-group-checktype form-group-2">
+                                            <div class="form-group  form-group-checktype2">
                                                 <input type="checkbox" name="recibir_info" checked>
-                                                <span class="image-check"></span>
+                                                <span class="btn-check"></span>
                                             </div>
                                             
                                         </div><!--//.inputs-row-->
@@ -485,16 +485,16 @@
                                             </div>
                                             <div class="form-group form-group-checktype form-group-2 mr-min-3">
                                                 <span class="label-checkbox">Sí</span>
-                                                <input type="radio" name="hermanos" value="si" checked>
+                                                <input class="index-checked" data-target=".input-ocultos" type="radio" name="hermanos" value="si">
                                                 <span class="image-check"></span>
                                             </div>
                                             <div class="form-group form-group-checktype form-group-2">
                                                 <span class="label-checkbox">No</span>
-                                                <input type="radio" name="hermanos" value="no">
+                                                <input type="radio" name="hermanos" value="no" checked>
                                                 <span class="image-check"></span>
                                             </div>
                                         </div><!--//.inputs-row-->
-                                        <div class="inputs-row">
+                                        <div class="inputs-row input-ocultos">
                                             <div class="form-group">
                                                 <select type="text" name="cuantos_hermanos">
                                                     <option>¿Cuántos?</option>
@@ -727,7 +727,7 @@
                                             <div class="label-row form-group-2-only-mov">
                                                 Tel.móvil:
                                             </div>
-                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                            <div class="form-group form-group-3 mr-min-2">
                                                 <input type="text" name="a_responsable_1_telmovil_cod">
                                                 <label for="a_responsable_1_telmovil_cod">Cod.area</label>
                                                 <span class="msj-error-input">
@@ -804,7 +804,7 @@
                                             <div class="label-row form-group-2-only-mov">
                                                 Tel.móvil:
                                             </div>
-                                            <div class="form-group form-group-2 form-group-3-only-mov mr-min-2">
+                                            <div class="form-group form-group-3 mr-min-2">
                                                 <input type="text" name="a_responsable_2_telmovil_cod">
                                                 <label for="a_responsable_2_telmovil_cod">Cod.area</label>
                                                 <span class="msj-error-input">
@@ -872,7 +872,7 @@
                                                     Viaje de egresados primaria
                                                 </div>
                                                 <div class="form-group form-group-checktype">
-                                                    <input type="checkbox" name="tipo_viaje" value="egresados-primaria">
+                                                    <input class="index-checked" data-target=".input-ocultos" type="checkbox" name="tipo_viaje" value="egresados-primaria">
                                                     <span class="image-check"></span>
                                                 </div>
 
@@ -880,7 +880,7 @@
                                                     Viaje de egresados secundaria
                                                 </div>
                                                 <div class="form-group form-group-checktype">
-                                                    <input type="checkbox" name="tipo_viaje" value="egresados-secundaria">
+                                                    <input class="index-checked" data-target=".input-ocultos" type="checkbox" name="tipo_viaje" value="egresados-secundaria">
                                                     <span class="image-check"></span>
                                                 </div>
 
@@ -888,7 +888,7 @@
                                                     Turismo Universitario
                                                 </div>
                                                 <div class="form-group form-group-checktype">
-                                                    <input type="checkbox" name="tipo_viaje" value="turismo-universitario">
+                                                    <input class="index-checked"  data-target=".input-ocultos" type="checkbox" name="tipo_viaje" value="turismo-universitario">
                                                     <span class="image-check"></span>
                                                 </div>
                                             </div><!--//.inner-cols-row-->
@@ -948,7 +948,7 @@
                                             </div>
                                         </div><!--//.inputs-row-->
 
-                                        <div class="inputs-row">
+                                        <div class="inputs-row input-ocultos">
                                             <div class="form-group">
                                                 <input type="text" name="colegio_universidad">
                                                 <label for="colegio_universidad">Colegio / Universidad</label>
@@ -961,7 +961,7 @@
                                             </div>
                                         </div><!--//.inputs-row-->
 
-                                        <div class="inputs-row">
+                                        <div class="inputs-row input-ocultos">
 
                                             <div class="form-group">
                                                 <input type="text" name="division_turno_carrera">
