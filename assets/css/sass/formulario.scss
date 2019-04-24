@@ -478,6 +478,7 @@
     width: 100%;
     margin-bottom: 30px;
     background-color: $color-blanco;
+    @include transition(all $transitionSpeed);
 
     label {
         position: absolute;
@@ -612,7 +613,8 @@
         width: 55%;
         text-transform: lowercase;
         line-height: 110%;
-        display:none;
+        opacity: 0;
+        @include transition(all $transitionSpeed);
     }//.msj-error-input
     
     .nota-aclaracion {
@@ -631,6 +633,14 @@
     }//.nota-aclaracion
 
 }//.form-group 
+
+.form-group-with-error {
+    border: 1px solid $color-rosa;
+    .msj-error-input {
+        opacity: 1;
+    }
+}//.form-group-with-error
+
 
 .form-group-checktype {
     background-color: transparent;

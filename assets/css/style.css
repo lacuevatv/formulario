@@ -866,6 +866,10 @@ html, body {
   width: 100%;
   margin-bottom: 30px;
   background-color: #fff;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
 }
 .form-group label {
   position: absolute;
@@ -1001,7 +1005,11 @@ html, body {
   width: 55%;
   text-transform: lowercase;
   line-height: 110%;
-  display: none;
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
 }
 .form-group .nota-aclaracion {
   font-family: "Open Sans", sans-serif;
@@ -1018,6 +1026,13 @@ html, body {
     top: 45px;
     left: 1px;
   }
+}
+
+.form-group-with-error {
+  border: 1px solid #FE6490;
+}
+.form-group-with-error .msj-error-input {
+  opacity: 1;
 }
 
 .form-group-checktype {

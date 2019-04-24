@@ -50,7 +50,7 @@
                                     <div class="inputs-col">
                                         <div class="inputs-row">
                                             <div class="form-group">
-                                                <input type="text" name="name" required>
+                                                <input type="text" name="name" data-validate="true" data-modo="pattern" data-pattern="[a-zA-Z]{3,12}" required>
                                                 <label for="name">Nombre</label>
                                                 <span class="msj-error-input">
                                                     Este campo es requerido
@@ -60,7 +60,7 @@
                                         </div><!--//.inputs-row-->
                                         <div class="inputs-row">
                                             <div class="form-group">
-                                                <input type="text" name="lastname" required>
+                                                <input type="text" name="lastname" data-validate="true" data-modo="pattern" data-pattern="[a-zA-Z]{3,12}" required>
                                                 <label for="lastname">Apellido</label>
                                                 <span class="msj-error-input">
                                                     Este campo es requerido
@@ -70,10 +70,10 @@
                                         </div><!--//.inputs-row-->
                                         <div class="inputs-row">
                                             <div class="form-group">
-                                                <input type="text" name="dni">
+                                                <input type="text" name="dni" data-validate="true" data-modo="pattern" data-pattern="[0-9]{8}">
                                                 <label for="dni">DNI<sup>*</sup></label>
                                                 <span class="msj-error-input">
-                                                    Este campo es requerido
+                                                    Requerido, debe tener 8 digitos
                                                 </span>
                                                 <span class="nota-aclaracion">
                                                     <sup>*</sup>Este campo es obligatorio

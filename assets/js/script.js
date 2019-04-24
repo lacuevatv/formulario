@@ -136,9 +136,6 @@ function initFormularios(){
     //clic en label, focus en input
     $(document).on('click', 'label', function(){
         
-        if ( $(this).attr('data-animate') == 'false' ) {
-            return true;    
-        }
         focusInput( this );
     });
 
@@ -146,6 +143,12 @@ function initFormularios(){
     $(document).on('focus', 'input', function(){
         zoomOutLabel( this );
         $(this).addClass('input-on');
+
+        //si tiene el error se lo quita
+        var contenedor = $(this).closest('.form-group');
+        if ( $(contenedor).hasClass('form-group-with-error') ) {
+            $(contenedor).removeClass('form-group-with-error');
+        }
     });
 
     //botones pantalla, para adelante y para atras:
@@ -153,10 +156,13 @@ function initFormularios(){
         var pantallaActual = $(this).attr('data-pantalla');
         var direccion = $(this).attr('data-direction');
         var nuevaPantalla;
-
+        
         //chequea direccion para asignar la pantalla a activar
         if (direccion == 'next') {
 
+            if ( ! validateInputs( pantallaActual ) ) {
+                return true;
+            }
             //si es la ultima pantalla hay que enviar formulario
             if ( parseInt(pantallaActual) == totalPantallas ) {
                 
@@ -393,4 +399,93 @@ function submitForm() {
     });
 
     $('#formulario').submit();
+}
+
+/*
+* VALIDA LOS INPUTS DE LA PANTALLA EN CUESTION
+* funcion se le pasa el numero de pantalla actual y con esto se busca los inputs que hay dentro y cada uno de ellos tiene la data para validarlos
+* si uno solo no funciona se marca los errores
+* sino devuelve true y pasa de pantalla
+*/
+function validateInputs( numeroPantalla ) {
+    
+    var validate = true;
+    var pantalla = '#pantalla-' + numeroPantalla;
+    pantalla = $(pantalla);
+    
+    var inputs = $(pantalla).find('input');
+    var selects = $(pantalla).find('select');
+    var textareas = $(pantalla).find('textarea');
+
+    //1. primero va a chequear los inputs
+    if ( inputs.length > 0 ) {
+        inputs.each(function(element) {
+            if ( ! validateInput(this) ) {
+                validate = false;
+            }
+        });
+    }//1
+
+    //2. segundo va a chequear los select
+    if ( selects.length > 0 ) {
+        selects.each(function(element) {
+            if ( ! validateInput(this) ) {
+                validate = false;
+            }
+        });
+    }//2
+
+    //3. tercero va a chequear los texarea
+    if ( textareas.length > 0 ) {
+        textareas.each(function(element) {
+            if ( ! validateInput(this) ) {
+                validate = false;
+            }
+        });
+    }//3
+    
+    
+    return validate;
+}
+
+//valida input de acuerdo a los datos guardados
+function validateInput(el) {
+    validate = true;
+
+    if ( $(el).attr('data-validate') == 'true' ) {
+        var valor = $(el).val();
+        var modoValidate = $(el).attr('data-modo');
+
+        switch (modoValidate) {
+            case 'pattern':
+                var pat = $(el).attr('data-pattern');
+                var regexDada = RegExp(pat);
+
+                if ( ! regexDada.test(valor) ) {
+                    validate = false;
+                }
+
+            break;
+            
+            //default es que no este vacio
+            default:
+             if ( valor == '' ) {
+                validate = false;
+             }
+            break;
+        }
+
+        
+        
+    }
+
+    if ( ! validate ) {
+        var contenedor = $(el).closest('.form-group');
+        $(contenedor).addClass('form-group-with-error');
+        //var msjError = $(contenedor).find('.msj-error-input');
+        //$(msjError).fadeIn();
+    }
+
+    //devuelve el estado de validate
+    return validate;
 }
