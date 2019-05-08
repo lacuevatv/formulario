@@ -32,6 +32,35 @@ $(document).ready(function(){
 /*--------------------------------------------------------------
 2.0 FUNCIONES
 --------------------------------------------------------------*/
+//detecta navegador:
+function getBrowserName() {
+    let browserName = "";
+
+    if(navigator.vendor.match(/google/i)) {
+        browserName = 'chrome/blink';
+    }
+    else if(navigator.vendor.match(/apple/i)) {
+        browserName = 'safari/webkit';
+    }
+    else if(navigator.userAgent.match(/firefox\//i)) {
+        browserName = 'firefox/gecko';
+    }
+    else if(navigator.userAgent.match(/edge\//i)) {
+        browserName = 'edge/edgehtml';
+    }
+    else if(navigator.userAgent.match(/trident\//i)) {
+        browserName = 'ie/trident';
+    }
+    else
+    {
+        browserName = navigator.userAgent + "\n" + navigator.vendor;
+    }
+    return browserName;
+
+    //para chequear luego usar
+    //getBrowserName().indexOf("safari")!=-1
+}
+
 //se pasa con numeral #page
 function scrollToID ( id ) {
     $('html, body').stop().animate({
@@ -40,6 +69,7 @@ function scrollToID ( id ) {
 }
 
 function scrollUp () {
+    
     $('html, body').stop().animate({
         scrollTop: 0
     }, 'slow');
@@ -152,7 +182,7 @@ function initFormularios(){
     });
 
     //botones pantalla, para adelante y para atras:
-    $(document).on('click', '.btn-pantallas', function(e){
+    $('.btn-pantallas').click( function(e){
         var pantallaActual = $(this).attr('data-pantalla');
         var direccion = $(this).attr('data-direction');
         var nuevaPantalla;
@@ -289,7 +319,8 @@ function setScreenFormulario( index ) {
     $(pantallas[index]).removeClass('activa');
 
     //sube la pantalla
-    scrollUp();
+    scrollUp();  
+
 }
 
 

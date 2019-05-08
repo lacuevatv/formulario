@@ -39,7 +39,8 @@ html, body {
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
-    overflow-x: hidden;
+    //overflow-x: hidden;
+    overflow: visible;
     background-color: $color-azul;
     background-repeat: no-repeat;
     background-image: url(../images/fondo-mobil.png);

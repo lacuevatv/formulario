@@ -218,7 +218,7 @@
                 height: 100%;
                 position: relative;
                 z-index: 1;
-                display: flex;
+                /*display: flex;
                 display: -o-flex;
                 display: -ms-flex;
                 display: -moz-flex;
@@ -237,7 +237,7 @@
                 -moz-flex-direction: column;
                 -ms-flex-direction: column;
                 -o-flex-direction: column;
-                flex-direction: column;
+                flex-direction: column;*/
                 @media (min-width: $xlg) {
                     padding: 0 250px;
                 }
@@ -268,6 +268,7 @@
                     font-size: 11px;
                     line-height: 14px;
                     text-align: center;
+                    margin-bottom: 50px;
                     @media (min-width: $xs) {
                         font-size: 18px;
                         line-height: 22px;
@@ -287,8 +288,23 @@
                 .wrapper-button {
                     padding: 20px 10px;
                     margin-bottom: 10px;
+                    display: flex;
+                    display: -o-flex;
+                    display: -ms-flex;
+                    display: -moz-flex;
+                    display: -webkit-flex;
+                    -webkit-align-items: center;
+                    -moz-align-items: center;
+                    -ms-align-items: center;
+                    -o-align-items: center;
+                    align-items: center;
+                    -webkit-justify-content: center;
+                    -moz-justify-content: center;
+                    -ms-justify-content: center;
+                    -o-justify-content: center;
+                    justify-content: center;
                     @media (min-width: $md) {
-                        padding: 10px 20px 50px;
+                        padding: 20px 20px 50px;
                         margin-bottom: 50px;
                     }
 

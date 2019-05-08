@@ -207,7 +207,7 @@ html, body {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-  overflow-x: hidden;
+  overflow: visible;
   background-color: #007bc3;
   background-repeat: no-repeat;
   background-image: url(../images/fondo-mobil.png);
@@ -617,7 +617,7 @@ html, body {
   height: 100%;
   position: relative;
   z-index: 1;
-  display: flex;
+  /*display: flex;
   display: -o-flex;
   display: -ms-flex;
   display: -moz-flex;
@@ -636,7 +636,7 @@ html, body {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   -o-flex-direction: column;
-  flex-direction: column;
+  flex-direction: column;*/
 }
 @media (min-width: 1600px) {
   .formulario .pantallas-formulario .pantalla .inner-pantalla {
@@ -670,6 +670,7 @@ html, body {
   font-size: 11px;
   line-height: 14px;
   text-align: center;
+  margin-bottom: 50px;
 }
 @media (min-width: 576px) {
   .formulario .pantallas-formulario .pantalla .inner-pantalla .description-text-normal {
@@ -691,10 +692,25 @@ html, body {
 .formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-button {
   padding: 20px 10px;
   margin-bottom: 10px;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
 }
 @media (min-width: 992px) {
   .formulario .pantallas-formulario .pantalla .inner-pantalla .wrapper-button {
-    padding: 10px 20px 50px;
+    padding: 20px 20px 50px;
     margin-bottom: 50px;
   }
 }
