@@ -267,6 +267,8 @@ function initFormularios(){
         html_hermanos( hermanos );
     });
 
+
+
 }//initFormularios()
 
 
